@@ -1,18 +1,8 @@
 {
-  "name": "vision-ui-dashboard-react",
+  "name": "bsc-start",
   "version": "3.0.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "Material UI version of Vision UI Dashboard by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/vision-ui-dashboard-react/#/dashboard",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/vision-ui-dashboard-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/vision-ui-dashboard-react.git"
-  },
+  "description": "Creative Vu",
   "dependencies": {
     "@delowar/react-circle-progressbar": "^1.0.0",
     "@emotion/cache": "11.4.0",
@@ -51,21 +41,10 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }

@@ -147,7 +147,7 @@ function Configurator() {
         <VuiBox mt={3} mb={2}>
           <VuiButton
             component={Link}
-            href="https://www.creative-tim.com/learning-lab/react/quick-start/vision-ui-dashboard/"
+            href=""
             target="_blank"
             rel="noreferrer"
             color="info"

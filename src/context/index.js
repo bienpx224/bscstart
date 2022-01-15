@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 const VisionUI = createContext();
 
 // Setting custom name for the context which is visible on react dev tools
-VisionUI.displayName = "VisionUIContext";
+VisionUI.displayName = "BSC Start";
 
 // Vision UI Dashboard React reducer
 function reducer(state, action) {
