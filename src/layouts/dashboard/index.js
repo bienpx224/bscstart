@@ -38,6 +38,8 @@ import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptio
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 
+
+
 function Dashboard() {
   const { gradients } = colors;
   const { cardContent } = gradients;

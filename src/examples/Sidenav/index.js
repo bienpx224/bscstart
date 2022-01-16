@@ -31,6 +31,7 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 
 // Vision UI Dashboard React icons
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
+import { useWeb3 } from "providers"
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, ...rest }) {
@@ -39,6 +40,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   const location = useLocation();
   const { pathname } = location;
   const collapseName = pathname.split("/").slice(1)[0];
+  const { connect } = useWeb3()
 
   const closeSidenav = () => setMiniSidenav(dispatch, true);
 
@@ -211,13 +213,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
         <SidenavCard color={color} />
         <VuiBox mt={2}>
           <VuiButton
-            component="a"
-            href=""
-            target="_blank"
             rel="noreferrer"
             variant="gradient"
             color={color}
             fullWidth
+            onClick={connect}
           >
             <div>
               Create IDO

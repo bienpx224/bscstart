@@ -24,8 +24,10 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 import breakpoints from "assets/theme/base/breakpoints";
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
+import { useWeb3 } from 'providers'
 
 function DefaultNavbar({ transparent, light, action }) {
+  const { connect } = useWeb3()
   const { borderCol } = colors;
   const { borderWidth } = borders;
   const [mobileNavbar, setMobileNavbar] = useState(false);
@@ -125,8 +127,8 @@ function DefaultNavbar({ transparent, light, action }) {
             <VuiBox display={{ xs: "none", lg: "inline-block" }}>
               <VuiButton
                 component="a"
-                href={action.route}
                 target="_blank"
+                onClick={connect}
                 rel="noreferrer"
                 color={action.color ? action.color : "info"}
                 sx={({ typography: { size }, functions: { pxToRem } }) => ({

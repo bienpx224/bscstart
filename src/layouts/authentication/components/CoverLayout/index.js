@@ -18,6 +18,7 @@ import colors from "assets/theme/base/colors";
 
 // Vision UI Dashboard React theme functions
 import tripleLinearGradient from "assets/theme/functions/tripleLinearGradient";
+import { useWeb3 } from 'providers'
 
 function CoverLayout({
   color,
@@ -32,6 +33,7 @@ function CoverLayout({
   children,
 }) {
   const { gradients } = colors;
+  const { connect } = useWeb3()
   return (
     <PageLayout
       background={tripleLinearGradient(
