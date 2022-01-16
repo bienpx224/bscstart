@@ -136,7 +136,7 @@ function Configurator() {
             <VuiBox mr={1.5}>
               <VuiButton
                 component={Link}
-                href=""
+                href="https://twitter.com/BscStart"
                 target="_blank"
                 rel="noreferrer"
                 color="dark"
