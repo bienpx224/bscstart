@@ -92,8 +92,8 @@ function Dashboard() {
                   --------------------------------------
                 </VuiTypography>
                 <VuiTypography color="white">
-                  PinkSale helps everyone to create their own tokens and token sales in few seconds.
-                  <br /> Tokens created on PinkSale will be verified and published on explorer websites.
+                  BSC Start helps everyone to create their own tokens and token sales in few seconds.
+                  <br /> Tokens created on BSC Start will be verified and published on explorer websites.
                 </VuiTypography>
               </VuiTypography>
             </VuiBox>

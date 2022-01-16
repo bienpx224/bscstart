@@ -1,30 +1,7 @@
-/*!
-
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -49,18 +26,7 @@ function Footer() {
             sx={{ textAlign: "center", fontWeight: "400 !important" }}
             color="text"
           >
-            @ 2021, Made with ❤️&nbsp;&nbsp;&nbsp; by{" "}
-            <VuiTypography
-              component="a"
-              variant="button"
-              href="#"
-              sx={{ textAlign: "center", fontWeight: "500 !important" }}
-              color="text"
-              mr="2px"
-            >
-              Simmmple
-            </VuiTypography>
-            &
+            @ 2021, Made with ❤️&nbsp;by{" "}
             <VuiTypography
               ml="2px"
               mr="2px"
@@ -70,9 +36,8 @@ function Footer() {
               sx={{ textAlign: "center", fontWeight: "500 !important" }}
               color="text"
             >
-              Creative Tim
+              Dang Quang Vu
             </VuiTypography>
-            for a better web
           </VuiTypography>
         </Grid>
         <Grid item xs={10}>

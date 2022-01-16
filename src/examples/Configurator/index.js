@@ -105,42 +105,10 @@ function Configurator() {
       </VuiBox>
 
       <Divider light />
-      <VuiBox pt={1.25} pb={3} px={3}>
-        <VuiBox>
-          <VuiTypography variant="h6" color="white">
-            Sidenav Colors
-          </VuiTypography>
-
-          <VuiBox mb={0.5}>
-            {sidenavColors.map((color) => (
-              <IconButton
-                key={color}
-                sx={({ borders: { borderWidth }, palette: { white, dark }, transitions }) => ({
-                  width: "24px",
-                  height: "24px",
-                  padding: 0,
-                  border: `${borderWidth[1]} solid ${white.main}`,
-                  borderColor: sidenavColor === color && dark.main,
-                  transition: transitions.create("border-color", {
-                    easing: transitions.easing.sharp,
-                    duration: transitions.duration.shorter,
-                  }),
-                  backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
-                    linearGradient(gradients[color].main, gradients[color].state),
-
-                  "&:not(:last-child)": {
-                    mr: 1,
-                  },
-
-                  "&:hover, &:focus, &:active": {
-                    borderColor: dark.main,
-                  },
-                })}
-                onClick={() => setSidenavColor(dispatch, color)}
-              />
-            ))}
-          </VuiBox>
-        </VuiBox>
+      <VuiBox pt={1.25} pb={3} px={3} textAlign="center">
+        <VuiTypography variant="h6" color="white">
+          Our Team
+        </VuiTypography>
 
         <Divider light />
 

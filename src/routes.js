@@ -5,7 +5,7 @@ import Billing from "layouts/billing";
 import Leaderboard from "layouts/rtl";
 import NFT from "layouts/profile";
 import Game from "layouts/authentication/sign-in";
-import Faucet from "layouts/authentication/sign-up";
+import Faucet from "layouts/authentication/sign-in";
 
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
