@@ -71,6 +71,11 @@ export default function App() {
     document.body.setAttribute("dir", direction);
   }, [direction]);
 
+  useEffect(() => {
+    document.title = "BCS Start"
+  }, []);
+
+
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -122,7 +127,7 @@ export default function App() {
           <>
             <Sidenav
               color={sidenavColor}
-              brand=""
+              brand="BSC Start"
               brandName="BSC START"
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
@@ -146,7 +151,7 @@ export default function App() {
         <>
           <Sidenav
             color={sidenavColor}
-            brand=""
+            brand="BSC Start"
             brandName="BSC START"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}

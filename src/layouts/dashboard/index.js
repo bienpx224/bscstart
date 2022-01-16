@@ -46,6 +46,7 @@ function Dashboard() {
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox py={3}>
+        {/* {Infomation Bar} */}
         <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
@@ -82,6 +83,8 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
+        {/* {Infomation Bar} */}
+
         {/* {Hero Infomation} */}
         <VuiBox>
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
