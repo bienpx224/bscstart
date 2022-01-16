@@ -104,14 +104,7 @@ function Dashboard() {
         {/* {Hero Card} */}
         <VuiBox mb={3}>
           <Grid container spacing="18px">
-            <Grid item xs={12} lg={4} xl={2}>
-              <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
-                <VuiTypography fontWeight="bold" color="white" align="center">
-                </VuiTypography>
-              </VuiBox>
-            </Grid>
-
-            <Grid item xs={12} lg={4} xl={2}>
+            <Grid item xs={12} lg={4} xl={3}>
               <Card>
                 <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
                   <VuiTypography fontWeight="bold" color="white" align="center">
@@ -121,7 +114,7 @@ function Dashboard() {
               </Card>
             </Grid>
 
-            <Grid item xs={12} lg={4} xl={2}>
+            <Grid item xs={12} lg={4} xl={3}>
               <Card>
                 <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
                   <VuiTypography fontWeight="bold" color="white" align="center">
@@ -130,7 +123,7 @@ function Dashboard() {
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={4} xl={2}>
+            <Grid item xs={12} lg={4} xl={3}>
               <Card>
                 <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
                   <VuiTypography fontWeight="bold" color="white" align="center">
@@ -139,7 +132,7 @@ function Dashboard() {
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={4} xl={2}>
+            <Grid item xs={12} lg={4} xl={3}>
               <Card>
                 <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
                   <VuiTypography fontWeight="bold" color="white" align="center">
@@ -148,10 +141,7 @@ function Dashboard() {
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={4} xl={2}>
-              <VuiBox sx={{ height: "300px" }}>
-              </VuiBox>
-            </Grid>
+
           </Grid>
         </VuiBox>
         {/* {Hero Card} */}
