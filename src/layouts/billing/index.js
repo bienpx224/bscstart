@@ -5,19 +5,14 @@ import Grid from "@mui/material/Grid";
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 
-// Vision UI Dashboard React components
-import MasterCard from "examples/Cards/MasterCard";
 // Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 
 // Billing page components
-import PaymentMethod from "layouts/billing/components/PaymentMethod";
-import Invoices from "layouts/billing/components/Invoices";
 import Swap from "layouts/billing/components/BillingInformation";
 import Transactions from "layouts/billing/components/Transactions";
-import CreditBalance from "./components/CreditBalance";
 
 function Billing() {
   return (

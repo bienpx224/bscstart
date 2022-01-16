@@ -1,23 +1,16 @@
-import { Card, Stack } from "@mui/material";
 // @mui material components
 import Grid from "@mui/material/Grid";
 import colors from "assets/theme/base/colors";
 
-// Vision UI Dashboard React base styles
-import linearGradient from "assets/theme/functions/linearGradient";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
-import VuiProgress from "components/VuiProgress";
-import VuiTypography from "components/VuiTypography";
 
 // Vision UI Dashboard React contexts
 import { setDirection, useVisionUIController } from "context";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
-import BarChart from "examples/Charts/BarCharts/BarChart";
 
 // Data
-import LineChart from "examples/Charts/LineCharts/LineChart";
 import Footer from "examples/Footer";
 
 // Vision UI Dashboard React example components
@@ -26,16 +19,10 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Projects from "layouts/rtl/components/Projects";
 
 // Dashboard layout components
-import WelcomeMark from "layouts/rtl/components/WelcomeMark";
-import { barChartDataDashboard } from "layouts/rtl/data/barChartData";
-import { barChartOptionsDashboard } from "layouts/rtl/data/barChartOptions";
-import { lineChartDataDashboard } from "layouts/rtl/data/lineChartData";
-import { lineChartOptionsDashboard } from "layouts/rtl/data/lineChartOptions";
 import { useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 // React icons
-import { IoIosRocket } from "react-icons/io";
 import { IoBuild, IoDocumentText, IoGlobe, IoWallet } from "react-icons/io5";
 
 function RTL() {
