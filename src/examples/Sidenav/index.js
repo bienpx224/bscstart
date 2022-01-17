@@ -215,13 +215,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           <VuiButton
             rel="noreferrer"
             variant="gradient"
-            color={color}
+            color="primary"
             fullWidth
             onClick={connect}
           >
-            <div>
-              Create IDO
-            </div>
+            Create IDO
           </VuiButton>
         </VuiBox>
       </VuiBox>

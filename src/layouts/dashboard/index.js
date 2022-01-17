@@ -2,7 +2,7 @@
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
-import { Card, LinearProgress, Stack } from "@mui/material";
+import { Card, Divider, LinearProgress, Stack } from "@mui/material";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -17,12 +17,8 @@ import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCar
 import linearGradient from "assets/theme/functions/linearGradient";
 
 // Vision UI Dashboard React base styles
-import typography from "assets/theme/base/typography";
 import colors from "assets/theme/base/colors";
 
-// Dashboard layout components
-import WelcomeMark from "layouts/dashboard/components/WelcomeMark";
-//
 // React icons
 import { IoIosRocket } from "react-icons/io";
 import { IoGlobe } from "react-icons/io5";
@@ -37,6 +33,7 @@ import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
+import VuiButton from "components/VuiButton";
 
 
 
@@ -49,14 +46,14 @@ function Dashboard() {
       <DashboardNavbar />
       <VuiBox py={3}>
         {/* {Infomation Bar} */}
-        <VuiBox mb={3}>
+        <VuiBox mb={6}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "BNB Price", fontWeight: "regular" }}
                 count="$630"
                 percentage={{ color: "success", text: "+15%" }}
-                icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
+                icon={{ color: "secondary", component: <IoWallet size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
@@ -90,11 +87,11 @@ function Dashboard() {
         {/* {Hero Infomation} */}
         <VuiBox>
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-            <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="100px">
+            <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="10px">
               <VuiTypography fontWeight="bold" color="white" align="center">
                 BscStart - BSC Launchpad Protocol
                 <VuiTypography color="white">
-                  -------
+                  <Divider light />
                 </VuiTypography>
                 <VuiTypography color="white">
                   Create tokens and token sales in few seconds!
@@ -103,52 +100,47 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
+          <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+            <VuiBox display="flex" margin="auto" height="100%">
+              <VuiBox width="18rem">
+                <VuiButton
+                  size="large"
+                  color="light"
+                  variant="contained"
+                  fullWidth
+                >
+                  CREATE LAUNCHPAD
+                </VuiButton>
+              </VuiBox>
+              <VuiButton
+                variant="text"
+                size="small"
+              >
+              </VuiButton>
+              <VuiBox width="18rem">
+                <VuiButton
+                  size="large"
+                  color="dark"
+                  variant="contained"
+                  fullWidth
+                >
+                  BscStart Sell
+                </VuiButton>
+              </VuiBox>
+            </VuiBox>
+          </VuiBox>
         </VuiBox>
         {/* {Hero Infomation} */}
-
-        {/* {Hero Card} */}
-        <Card color="white">
-          Button
-        </Card>
-        {/* {Hero Card} */}
-
-        {/* {Hero Info} */}
-        <VuiBox mb={3} mt={18}>
+        <Divider light />
+        {/* {Project Active} */}
+        <VuiBox mb={3} mt={30}>
           <Grid container spacing="18px">
-            <Grid item xs={12} lg={6} xl={3}>
-              <VuiBox sx={{ height: "110px" }}>
-                <WelcomeMark />
-              </VuiBox>
-            </Grid>
-            <Grid item xs={12} lg={6} xl={4}>
-              <Card>
-                <VuiBox sx={{ height: "100%" }}>
-                  <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
-                    Sales Overview
-                  </VuiTypography>
-                  <VuiBox display="flex" alignItems="center" mb="40px">
-                    <VuiTypography variant="button" color="success" fontWeight="bold">
-                      +5% more{" "}
-                      <VuiTypography variant="button" color="text" fontWeight="regular">
-                        in 2021
-                      </VuiTypography>
-                    </VuiTypography>
-                  </VuiBox>
-                  <VuiBox sx={{ height: "310px" }}>
-                    <LineChart
-                      lineChartData={lineChartDataDashboard}
-                      lineChartOptions={lineChartOptionsDashboard}
-                    />
-                  </VuiBox>
-                </VuiBox>
-              </Card>
-            </Grid>
-            <Grid item xs={12} lg={6} xl={5}>
+            <Grid item xs={12} lg={12} xl={12}>
               <Card>
                 <VuiBox>
                   <VuiBox
                     mb="24px"
-                    height="220px"
+                    height="350px"
                     sx={{
                       background: linearGradient(
                         cardContent.main,
@@ -250,6 +242,34 @@ function Dashboard() {
                   </Grid>
                 </VuiBox>
               </Card>
+              {/* {Project Active} */}
+              <Divider light />
+              {/* {BscStart Price Chart} */}
+              <Grid item xs={12} lg={12} xl={12} pt={15}>
+                <Card>
+                  <VuiBox sx={{ height: "100%" }}>
+                    <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
+                      BscStart Price
+                    </VuiTypography>
+                    <VuiBox display="flex" alignItems="center" mb="40px">
+                      <VuiTypography variant="button" color="success" fontWeight="bold">
+                        +24,3% more{" "}
+                        <VuiTypography variant="button" color="text" fontWeight="regular">
+                          in 2022
+                        </VuiTypography>
+                      </VuiTypography>
+                    </VuiBox>
+                    <VuiBox sx={{ height: "310px" }}>
+                      <LineChart
+                        lineChartData={lineChartDataDashboard}
+                        lineChartOptions={lineChartOptionsDashboard}
+                      />
+                    </VuiBox>
+                  </VuiBox>
+                </Card>
+              </Grid>
+              {/* {BscStart Price Chart} */}
+
             </Grid>
           </Grid>
         </VuiBox>
@@ -262,7 +282,7 @@ function Dashboard() {
         </Grid>
       </VuiBox>
       <Footer />
-    </DashboardLayout>
+    </DashboardLayout >
   );
 }
 

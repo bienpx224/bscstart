@@ -1,8 +1,8 @@
 // Vision UI Dashboard React layouts
 import Home from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
-import Leaderboard from "layouts/rtl";
+import Launchpad from "layouts/tables";
+import Swap from "layouts/billing";
+import Staking from "layouts/rtl";
 import NFT from "layouts/profile";
 import Game from "layouts/authentication/sign-in";
 import Faucet from "layouts/authentication/sign-in";
@@ -32,7 +32,7 @@ const routes = [
     key: "launchpad",
     route: "/launchpad",
     icon: <IoStatsChart size="15px" color="inherit" />,
-    component: Tables,
+    component: Launchpad,
     noCollapse: true,
   },
   {
@@ -41,7 +41,7 @@ const routes = [
     key: "swap",
     route: "/swap",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
-    component: Billing,
+    component: Swap,
     noCollapse: true,
   },
   {
@@ -50,7 +50,7 @@ const routes = [
     key: "staking",
     route: "/staking",
     icon: <IoBuild size="15px" color="inherit" />,
-    component: Leaderboard,
+    component: Staking,
     noCollapse: true,
   },
   { type: "title", title: "Comming Soon Project", key: "account-pages" },
@@ -68,7 +68,7 @@ const routes = [
     name: "Game",
     key: "game",
     route: "/game",
-    icon: <IoIosDocument size="15px" color="inherit" />,
+    icon: <IoRocketSharp size="15px" color="inherit" />,
     component: Game,
     noCollapse: true,
   },
@@ -76,8 +76,8 @@ const routes = [
     type: "collapse",
     name: "Chart",
     key: "chart",
+    icon: <IoIosDocument size="15px" color="inherit" />,
     route: "/chart",
-    icon: <IoRocketSharp size="15px" color="inherit" />,
     component: Faucet,
     noCollapse: true,
   },

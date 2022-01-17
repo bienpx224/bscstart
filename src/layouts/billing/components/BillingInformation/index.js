@@ -1,5 +1,6 @@
 
 // @mui material components
+import { Divider } from "@mui/material";
 import Card from "@mui/material/Card";
 
 // Vision UI Dashboard React components
@@ -14,13 +15,21 @@ function BillingInformation() {
     <Card id="delete-account">
       <VuiBox>
         <VuiTypography variant="lg" color="white" fontWeight="bold">
-          DEX Swap
+          Swap
         </VuiTypography>
       </VuiBox>
       <VuiBox>
         <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-          <VuiBox height="520px" display="flex" margin="auto" pt="200px">
-            Comming Soon...
+          <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
+            <VuiTypography fontWeight="bold" color="white" align="center">
+              BscStart - BSC Swap Protocol
+              <VuiTypography color="white">
+                <Divider light />
+              </VuiTypography>
+              <VuiTypography color="white">
+                Cooming Soon ....
+              </VuiTypography>
+            </VuiTypography>
           </VuiBox>
         </VuiBox>
       </VuiBox>

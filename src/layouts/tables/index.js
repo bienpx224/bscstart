@@ -15,6 +15,10 @@ import Table from "examples/Tables/Table";
 
 // Data
 import projectsTableData from "layouts/tables/data/projectsTableData";
+import Grid from "@mui/material/Grid";
+import VuiButton from "components/VuiButton";
+import { Divider, Switch } from "@mui/material";
+import { Redirect } from "react-router-dom";
 
 function Tables() {
   const { columns: prCols, rows: prRows } = projectsTableData;
@@ -22,11 +26,42 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <VuiBox py={3} height={720}>
+
+      {/* {Button} */}
+      <VuiBox mb={3} pt={3}>
+        <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+          <Grid item xs={12} md={6} xl={3}>
+            <VuiButton color="light" size="large" fullWidth>
+              Create Launchpad
+            </VuiButton>
+          </Grid>
+          <Grid item xs={12} md={6} xl={3}>
+            <VuiButton color="dark" size="large" fullWidth>
+              Leaderboard
+            </VuiButton>
+          </Grid>
+          <Grid item xs={12} md={6} xl={3}>
+            <VuiButton color="dark" size="large" fullWidth>
+              Create Token
+            </VuiButton>
+
+          </Grid>
+          <Grid item xs={12} md={6} xl={3}>
+            <VuiButton color="dark" size="large" fullWidth>
+              Launchpad List
+            </VuiButton>
+
+          </Grid>
+        </Grid>
+      </VuiBox>
+      {/* {Button} */}
+      <Divider light />
+
+      <VuiBox py={3} height="100vh">
         <Card>
           <VuiBox display="flex" justifyContent="space-between" alignItems="center">
             <VuiTypography variant="lg" color="white">
-              Projects table
+              Projects List
             </VuiTypography>
           </VuiBox>
           <VuiBox
@@ -43,12 +78,25 @@ function Tables() {
               },
             }}
           >
-            <Table columns={prCols} rows={prRows} />
+            {/* <Table columns={prCols} rows={prRows} /> */}
+            <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+              <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
+                <VuiTypography fontWeight="bold" color="white" align="center">
+                  BscStart - BSC Launchpad Protocol
+                  <VuiTypography color="white">
+                    <Divider light />
+                  </VuiTypography>
+                  <VuiTypography color="white">
+                    Cooming Soon ....
+                  </VuiTypography>
+                </VuiTypography>
+              </VuiBox>
+            </VuiBox>
           </VuiBox>
         </Card>
       </VuiBox>
       <Footer />
-    </DashboardLayout>
+    </DashboardLayout >
   );
 }
 
