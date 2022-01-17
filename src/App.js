@@ -72,7 +72,7 @@ export default function App() {
   }, [direction]);
 
   useEffect(() => {
-    document.title = "BCS Start"
+    document.title = "BscStart"
   }, []);
 
 
@@ -127,8 +127,8 @@ export default function App() {
           <>
             <Sidenav
               color={sidenavColor}
-              brand="BSC Start"
-              brandName="BSC START"
+              brand="BscStart"
+              brandName="BscStart"
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
@@ -151,8 +151,8 @@ export default function App() {
         <>
           <Sidenav
             color={sidenavColor}
-            brand="BSC Start"
-            brandName="BSC START"
+            brand="BscStart"
+            brandName="BscStart"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}

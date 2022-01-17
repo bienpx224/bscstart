@@ -53,8 +53,8 @@ function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "Bitcoin Price", fontWeight: "regular" }}
-                count="$53,000"
+                title={{ text: "BNB Price", fontWeight: "regular" }}
+                count="$630"
                 percentage={{ color: "success", text: "+15%" }}
                 icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
               />
@@ -92,13 +92,13 @@ function Dashboard() {
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
             <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="100px">
               <VuiTypography fontWeight="bold" color="white" align="center">
-                The Lauchpad Protocol for Everyone!<br />
+                BscStart - BSC Launchpad Protocol
                 <VuiTypography color="white">
-                  --------------------------------------
+                  -------
                 </VuiTypography>
                 <VuiTypography color="white">
-                  BSC Start helps everyone to create their own tokens and token sales in few seconds.
-                  <br /> Tokens created on BSC Start will be verified and published on explorer websites.
+                  Create tokens and token sales in few seconds!
+                  <br /> Tokens created will be verified and published on BscScan.
                 </VuiTypography>
               </VuiTypography>
             </VuiBox>
@@ -107,48 +107,9 @@ function Dashboard() {
         {/* {Hero Infomation} */}
 
         {/* {Hero Card} */}
-        <VuiBox mb={3}>
-          <Grid container spacing="18px">
-            <Grid item xs={12} lg={4} xl={3}>
-              <Card>
-                <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
-                  <VuiTypography fontWeight="bold" color="white" align="center">
-                    Standard
-                  </VuiTypography>
-                </VuiBox>
-              </Card>
-            </Grid>
-
-            <Grid item xs={12} lg={4} xl={3}>
-              <Card>
-                <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
-                  <VuiTypography fontWeight="bold" color="white" align="center">
-                    Customization
-                  </VuiTypography>
-                </VuiBox>
-              </Card>
-            </Grid>
-            <Grid item xs={12} lg={4} xl={3}>
-              <Card>
-                <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
-                  <VuiTypography fontWeight="bold" color="white" align="center">
-                    Lauchpad
-                  </VuiTypography>
-                </VuiBox>
-              </Card>
-            </Grid>
-            <Grid item xs={12} lg={4} xl={3}>
-              <Card>
-                <VuiBox sx={{ height: "300px" }} display="flex" margin="auto" height="100%">
-                  <VuiTypography fontWeight="bold" color="white" align="center">
-                    Community
-                  </VuiTypography>
-                </VuiBox>
-              </Card>
-            </Grid>
-
-          </Grid>
-        </VuiBox>
+        <Card color="white">
+          Button
+        </Card>
         {/* {Hero Card} */}
 
         {/* {Hero Info} */}
