@@ -34,12 +34,14 @@ import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptio
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 import VuiButton from "components/VuiButton";
+import { useWeb3 } from 'providers'
 
 
 
 function Dashboard() {
   const { gradients } = colors;
   const { cardContent } = gradients;
+  const { connect } = useWeb3();
 
   return (
     <DashboardLayout>
@@ -82,9 +84,11 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
-        {/* {Infomation Bar} */}
+      </VuiBox>
+      {/* {Infomation Bar} */}
 
-        {/* {Hero Infomation} */}
+      {/* {Hero Infomation} */}
+      <VuiBox>
         <VuiBox>
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
             <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="10px">
@@ -100,36 +104,34 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
-          <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-            <VuiBox display="flex" margin="auto" height="100%">
-              <VuiBox width="18rem">
-                <VuiButton
-                  size="large"
-                  color="light"
-                  variant="contained"
-                  fullWidth
-                >
-                  CREATE LAUNCHPAD
-                </VuiButton>
-              </VuiBox>
-              <VuiButton
-                variant="text"
-                size="small"
-              >
-              </VuiButton>
-              <VuiBox width="18rem">
-                <VuiButton
-                  size="large"
-                  color="dark"
-                  variant="contained"
-                  fullWidth
-                >
-                  BscStart Sell
-                </VuiButton>
-              </VuiBox>
-            </VuiBox>
-          </VuiBox>
         </VuiBox>
+        <VuiBox mb={6}>
+          <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={8} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="light"
+                variant="contained"
+                fullWidth
+                onClick={connect}
+              >
+                CREATE LAUNCHPAD
+              </VuiButton>
+            </Grid>
+            <Grid item xs={8} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="dark"
+                variant="contained"
+                fullWidth
+                onClick={connect}
+              >
+                BUY BscStart TOKEN
+              </VuiButton>
+            </Grid>
+          </Grid>
+        </VuiBox>
+
         {/* {Hero Infomation} */}
         <Divider light />
         {/* {Project Active} */}
@@ -259,7 +261,7 @@ function Dashboard() {
                         </VuiTypography>
                       </VuiTypography>
                     </VuiBox>
-                    <VuiBox sx={{ height: "310px" }}>
+                    <VuiBox sx={{ height: "450px" }}>
                       <LineChart
                         lineChartData={lineChartDataDashboard}
                         lineChartOptions={lineChartOptionsDashboard}

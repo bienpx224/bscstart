@@ -26,7 +26,7 @@ function Footer() {
             mr="2px"
             component="a"
             variant="button"
-            href="https://twitter.com/vugomars"
+            href="/home"
             sx={{ textAlign: "center", fontWeight: "500 !important" }}
             color="white"
           >
