@@ -30,7 +30,6 @@ function Billing() {
           </Grid>
         </VuiBox>
       </VuiBox>
-      <Footer />
     </DashboardLayout>
   );
 }

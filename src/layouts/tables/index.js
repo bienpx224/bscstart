@@ -17,11 +17,9 @@ import Table from "examples/Tables/Table";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 import Grid from "@mui/material/Grid";
 import VuiButton from "components/VuiButton";
-import { Divider, Switch } from "@mui/material";
-import { Redirect } from "react-router-dom";
+import { CircularProgress, Divider, LinearProgress } from "@mui/material";
 
 function Tables() {
-  const { columns: prCols, rows: prRows } = projectsTableData;
 
   return (
     <DashboardLayout>
@@ -30,27 +28,36 @@ function Tables() {
       {/* {Button} */}
       <VuiBox mb={3} pt={3}>
         <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
-          <Grid item xs={12} md={6} xl={3}>
-            <VuiButton color="light" size="large" fullWidth>
+          <Grid item xs={12} md={6} xl={2}>
+            <VuiButton color="lightblue" size="20px" fullWidth>
               Create Launchpad
             </VuiButton>
           </Grid>
-          <Grid item xs={12} md={6} xl={3}>
-            <VuiButton color="dark" size="large" fullWidth>
-              Leaderboard
+          <Grid item xs={12} md={6} xl={2}>
+            <VuiButton color="dark" size="20px" fullWidth disabled>
+              Create Swap
+              <CircularProgress size="15px" thickness={5} />
             </VuiButton>
           </Grid>
-          <Grid item xs={12} md={6} xl={3}>
-            <VuiButton color="dark" size="large" fullWidth>
+          <Grid item xs={12} md={6} xl={2}>
+            <VuiButton color="dark" disabled size="20px" fullWidth contained>
               Create Token
+              <CircularProgress size="15px" thickness={5} />
             </VuiButton>
 
           </Grid>
-          <Grid item xs={12} md={6} xl={3}>
-            <VuiButton color="dark" size="large" fullWidth>
+          <Grid item xs={12} md={6} xl={2}>
+            <VuiButton color="dark" disabled size="20px" fullWidth>
               Launchpad List
+              <CircularProgress size="15px" thickness={5} />
             </VuiButton>
 
+          </Grid>
+          <Grid item xs={12} md={6} xl={2}>
+            <VuiButton color="dark" disabled size="20px" fullWidth>
+              Leaderboard
+              <CircularProgress size="15px" thickness={5} />
+            </VuiButton>
           </Grid>
         </Grid>
       </VuiBox>
@@ -83,9 +90,9 @@ function Tables() {
               <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
                 <VuiTypography fontWeight="bold" color="white" align="center">
                   BscStart - BSC Launchpad Protocol
-                  <VuiTypography color="white">
-                    <Divider light />
-                  </VuiTypography>
+                  <VuiBox width="400px">
+                    <LinearProgress color="secondary" />
+                  </VuiBox>
                   <VuiTypography color="white">
                     Cooming Soon ....
                   </VuiTypography>
@@ -95,7 +102,6 @@ function Tables() {
           </VuiBox>
         </Card>
       </VuiBox>
-      <Footer />
     </DashboardLayout >
   );
 }

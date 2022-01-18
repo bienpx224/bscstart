@@ -158,6 +158,27 @@ function Configurator() {
           </VuiBox>
         </VuiBox>
       </VuiBox>
+      <VuiTypography
+        variant="button"
+        sx={{ textAlign: "center", fontWeight: "400 !important" }}
+        color="white"
+      >
+        @2022, Made with ❤️ by{" "}
+        <VuiTypography
+          ml="2px"
+          mr="2px"
+          component="a"
+          variant="button"
+          href="https://twitter.com/vugomars"
+          sx={{ textAlign: "center", fontWeight: "500 !important" }}
+          color="white"
+        >
+          Dang Quang Vu
+        </VuiTypography>
+      </VuiTypography>
+
+
+
     </ConfiguratorRoot>
   );
 }

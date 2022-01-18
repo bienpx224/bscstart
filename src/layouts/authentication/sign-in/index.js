@@ -4,6 +4,8 @@ import CoverLayout from "layouts/authentication/components/CoverLayout";
 
 // Images
 import bgSignIn from "assets/images/signInImage.png";
+import { LinearProgress } from "@mui/material";
+import VuiBox from "components/VuiBox";
 
 function SignIn() {
 
@@ -16,6 +18,9 @@ function SignIn() {
       motto="LAUCHPAD FOR EVERYONE"
       image={bgSignIn}
     >
+      <VuiBox width="400px">
+        <LinearProgress color="secondary" />
+      </VuiBox>
     </CoverLayout>
   );
 }

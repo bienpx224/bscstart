@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // react-router-dom components
 import { useLocation, NavLink } from "react-router-dom";
@@ -32,6 +32,10 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // Vision UI Dashboard React icons
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
 import { useWeb3 } from "providers"
+import { Button, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem } from "@mui/material";
+import { routes } from 'routes'
+
+
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, ...rest }) {
@@ -42,12 +46,22 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   const collapseName = pathname.split("/").slice(1)[0];
   const { connect } = useWeb3()
 
+  const [anchorEl, setAnchorEl] = useState(null);
+  const expand = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const closeSidenav = () => setMiniSidenav(dispatch, true);
 
   useEffect(() => {
+
     // A function that sets the mini state of the sidenav.
     function handleMiniSidenav() {
-      setMiniSidenav(dispatch, window.innerWidth < 1200);
+      setMiniSidenav(dispatch, window.innerWidth < 1300);
     }
 
     /**
@@ -69,7 +83,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   }, []);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
-  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, route, href }) => {
+  const renderRoutes = routes.map(({ submenu, type, name, icon, title, noCollapse, key, route, href }) => {
     let returnValue;
 
     if (type === "collapse") {
@@ -193,7 +207,9 @@ function Sidenav({ color, brandName, routes, ...rest }) {
         </VuiBox>
       </VuiBox>
       <Divider light />
-      <List>{renderRoutes}</List>
+      <List>
+        {renderRoutes}
+      </List>
       <VuiBox
         my={2}
         mx={2}
@@ -219,11 +235,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             fullWidth
             onClick={connect}
           >
-            Create IDO
+            Buy BS
           </VuiButton>
         </VuiBox>
       </VuiBox>
-    </SidenavRoot>
+    </SidenavRoot >
   );
 }
 

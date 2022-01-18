@@ -14,7 +14,8 @@ import VuiTypography from "components/VuiTypography";
 
 // Data
 import data from "layouts/rtl/components/Projects/data";
-import { Divider } from "@mui/material";
+import { CircularProgress, Divider, Grid, LinearProgress } from "@mui/material";
+import VuiButton from "components/VuiButton";
 
 function Projects() {
   const { columns, rows } = data();
@@ -46,16 +47,26 @@ function Projects() {
 
   return (
     <VuiBox height="100vh">
+      <VuiBox mb={3} pt={3}>
+        <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+          <Grid item xs={12} md={6} xl={6}>
+            <VuiButton color="dark" size="20px" fullWidth disabled>
+              BS Stake
+              <CircularProgress size="15px" thickness={5} />
+            </VuiButton>
+          </Grid>
+        </Grid>
+      </VuiBox>
       <Card>
         <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
           <VuiBox>
             <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
-              Leaderboard Projects
+              Stake
             </VuiTypography>
             <VuiBox display="flex" alignItems="center" lineHeight={0}>
               <BsCheckCircleFill color="green" size="15px" />
               <VuiTypography variant="button" fontWeight="regular" color="text" ml="5px">
-                &nbsp;<strong>Top 10</strong> Trending Projects
+                <strong>Top</strong>
               </VuiTypography>
             </VuiBox>
           </VuiBox>
@@ -85,10 +96,10 @@ function Projects() {
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
             <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
               <VuiTypography fontWeight="bold" color="white" align="center">
-                BscStart - BSC Launchpad Protocol
-                <VuiTypography color="white">
-                  <Divider light />
-                </VuiTypography>
+                BscStart - BS Stake
+                <VuiBox width="400px">
+                  <LinearProgress color="secondary" />
+                </VuiBox>
                 <VuiTypography color="white">
                   Cooming Soon
                 </VuiTypography>

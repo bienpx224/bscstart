@@ -60,7 +60,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "BSC Token Price" }}
+                title={{ text: "BS Token Price" }}
                 count="$0,151"
                 percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
@@ -91,9 +91,23 @@ function Dashboard() {
       <VuiBox>
         <VuiBox>
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-            <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="10px">
-              <VuiTypography fontWeight="bold" color="white" align="center">
-                BscStart - BSC Launchpad Protocol
+            <VuiBox display="flex" margin="auto" pt="40px" height="100%" pb="10px">
+              <VuiTypography fontWeight="extrabold" color="white" align="center">
+                <VuiTypography
+                  fontWeight="bold"
+                  color="info"
+                  variant="h1"
+                >
+                  BscStart
+                </VuiTypography>
+
+                <VuiTypography
+                  fontWeight="bold"
+                  color="white"
+                  variant="h1"
+                >
+                  BSC Launchpad Protocol
+                </VuiTypography>
                 <VuiTypography color="white">
                   <Divider light />
                 </VuiTypography>
@@ -110,23 +124,12 @@ function Dashboard() {
             <Grid item xs={8} md={5} xl={3}>
               <VuiButton
                 size="large"
-                color="light"
+                color="lightblue"
                 variant="contained"
                 fullWidth
                 onClick={connect}
               >
                 CREATE LAUNCHPAD
-              </VuiButton>
-            </Grid>
-            <Grid item xs={8} md={5} xl={3}>
-              <VuiButton
-                size="large"
-                color="dark"
-                variant="contained"
-                fullWidth
-                onClick={connect}
-              >
-                BUY BscStart TOKEN
               </VuiButton>
             </Grid>
           </Grid>
@@ -136,8 +139,19 @@ function Dashboard() {
         <Divider light />
         {/* {Project Active} */}
         <VuiBox mb={3} mt={30}>
-          <Grid container spacing="18px">
-            <Grid item xs={12} lg={12} xl={12}>
+          <Divider light />
+          <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0} width="100%">
+            <VuiBox display="flex" margin="auto" height="100%">
+              <VuiTypography fontWeight="extrabold" color="white" align="center">
+                <VuiTypography color="white" fontWeight="bold" variant="h2">
+                  Active Projects
+                </VuiTypography>
+              </VuiTypography>
+            </VuiBox>
+          </VuiBox>
+          <Divider light />
+          <Grid container spacing="18px" alignItems="center" justifyContent="center">
+            <Grid item xs={12} lg={12} xl={10}>
               <Card>
                 <VuiBox>
                   <VuiBox
@@ -157,8 +171,8 @@ function Dashboard() {
                       barChartOptions={barChartOptionsDashboard}
                     />
                   </VuiBox>
-                  <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
-                    Active Project
+                  <VuiTypography variant="h4" color="white" fontWeight="bold" mb="5px">
+                    Active Projects
                   </VuiTypography>
                   <VuiBox display="flex" alignItems="center" mb="40px">
                     <VuiTypography variant="button" color="success" fontWeight="bold">
@@ -245,13 +259,24 @@ function Dashboard() {
                 </VuiBox>
               </Card>
               {/* {Project Active} */}
-              <Divider light />
+
               {/* {BscStart Price Chart} */}
-              <Grid item xs={12} lg={12} xl={12} pt={15}>
+              <Grid item xs={12} lg={12} xl={12} pt={15} pb={10} >
+                <Divider light />
+                <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0} width="100%">
+                  <VuiBox display="flex" margin="auto" height="100%" >
+                    <VuiTypography fontWeight="extrabold" color="white" align="center">
+                      <VuiTypography variant="h2" color="white" fontWeight="bold">
+                        BS Chart
+                      </VuiTypography>
+                    </VuiTypography>
+                  </VuiBox>
+                </VuiBox>
+                <Divider light />
                 <Card>
                   <VuiBox sx={{ height: "100%" }}>
                     <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
-                      BscStart Price
+                      BS Price
                     </VuiTypography>
                     <VuiBox display="flex" alignItems="center" mb="40px">
                       <VuiTypography variant="button" color="success" fontWeight="bold">
@@ -283,7 +308,6 @@ function Dashboard() {
         <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
         </Grid>
       </VuiBox>
-      <Footer />
     </DashboardLayout >
   );
 }

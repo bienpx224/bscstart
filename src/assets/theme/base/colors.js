@@ -44,8 +44,8 @@ export default {
   },
 
   lightblue: {
-    main: "#42e161",
-    focus: "#42e161",
+    main: "#0075FF",
+    focus: "#0075FF",
   },
 
   orange: {

@@ -29,6 +29,7 @@ import routes from "routes";
 
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
+import Footer from "examples/Footer";
 
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
@@ -166,6 +167,7 @@ export default function App() {
         {getRoutes(routes)}
         <Redirect from="*" to="/home" />
       </Switch>
+      <Footer />
     </ThemeProvider>
   );
 }

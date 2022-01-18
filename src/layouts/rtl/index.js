@@ -61,7 +61,6 @@ function RTL() {
           </Grid>
         </Grid>
       </VuiBox>
-      <Footer />
     </DashboardLayout>
   );
 }

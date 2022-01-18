@@ -43,6 +43,7 @@ import {
 import team2 from "assets/images/team-2.jpg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import { useWeb3 } from 'providers'
+import VuiButton from "components/VuiButton";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
@@ -168,7 +169,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                   </VuiTypography>
                 </IconButton>
                 : isWeb3Loaded ?
-                  <IconButton sx={navbarIconButton} size="small" onClick={connect}>
+                  <IconButton sx={navbarIconButton} size="medium" onClick={connect}>
                     <Icon
                       sx={({ palette: { dark, white } }) => ({
                         color: light ? white.main : dark.main,
@@ -180,9 +181,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
                     <VuiTypography
                       variant="button"
                       fontWeight="medium"
-                      color={light ? "white" : "dark"}
+                      color={light ? "dark" : "white"}
                     >
-                      Connect
+                      <VuiButton
+                        color="success"
+                      >
+                        Connect
+                      </VuiButton>
                     </VuiTypography>
                   </IconButton>
                   :

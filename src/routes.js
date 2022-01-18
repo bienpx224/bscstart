@@ -25,6 +25,7 @@ const routes = [
     icon: <IoHome size="15px" color="inherit" />,
     component: Home,
     noCollapse: true,
+
   },
   {
     type: "collapse",
@@ -33,16 +34,49 @@ const routes = [
     route: "/launchpad",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Launchpad,
-    noCollapse: true,
+    collapedSize: "10px",
+    children: [
+      {
+        title: "Create Launchpad",
+        path: '/launchpad/create-lauchpad'
+      },
+      {
+        title: "Create Swap",
+        path: '/launchpad/create-swap'
+      },
+      {
+        title: "Create Token",
+        path: '/launchpad/create-token'
+      },
+      {
+        title: "Launchpad List",
+        path: '/launchpad/launchpad-list'
+      },
+      {
+        title: "Leaderboard",
+        path: '/launchpad/loaderboard'
+      }
+    ]
   },
   {
     type: "collapse",
-    name: "Swap",
-    key: "swap",
-    route: "/swap",
+    name: "Trade",
+    key: "trade",
+    route: "/trade",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
     component: Swap,
-    noCollapse: true,
+    noCollapse: false,
+    children: [
+      {
+        title: "Exchange",
+        path: '/trade/exchange'
+      },
+      {
+        title: "Liquidity",
+        path: '/trade/liquidity'
+      },
+
+    ]
   },
   {
     type: "collapse",
@@ -51,9 +85,20 @@ const routes = [
     route: "/staking",
     icon: <IoBuild size="15px" color="inherit" />,
     component: Staking,
-    noCollapse: true,
+    noCollapse: false,
+    children: [
+      {
+        title: "Stake Bs",
+        path: '/staking/stake-bs'
+      },
+    ]
+
   },
-  { type: "title", title: "Comming Soon Project", key: "account-pages" },
+  {
+    type: "title",
+    title: "Comming Soon Project",
+    key: "account-pages"
+  },
   {
     type: "collapse",
     name: "NFT Marketplace",
@@ -61,7 +106,18 @@ const routes = [
     route: "/nftmarketplace",
     icon: <BsFillPersonFill size="15px" color="inherit" />,
     component: NFT,
-    noCollapse: true,
+    noCollapse: false,
+    children: [
+      {
+        title: "Create NFT",
+        path: '/nftmarketplace/create-nft'
+      },
+      {
+        title: "Marketplace",
+        path: '/nftmarketplace'
+      },
+
+    ]
   },
   {
     type: "collapse",
@@ -70,7 +126,21 @@ const routes = [
     route: "/game",
     icon: <IoRocketSharp size="15px" color="inherit" />,
     component: Game,
-    noCollapse: true,
+    noCollapse: false,
+    children: [
+      {
+        title: "Metaverse",
+        path: '/game/metaverse'
+      },
+      {
+        title: "Lottery",
+        path: '/game/lottery'
+      },
+      {
+        title: "Prediction",
+        path: '/game/prediction'
+      }
+    ]
   },
   {
     type: "collapse",
@@ -79,7 +149,13 @@ const routes = [
     icon: <IoIosDocument size="15px" color="inherit" />,
     route: "/chart",
     component: Faucet,
-    noCollapse: true,
+    noCollapse: false,
+    children: [
+      {
+        title: "BSC Chart",
+        path: '/chart/bsc-chart'
+      },
+    ]
   },
 ];
 

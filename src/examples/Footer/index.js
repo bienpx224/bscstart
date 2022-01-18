@@ -1,74 +1,145 @@
 
 // Vision UI Dashboard React components
+import { Card, Grid } from "@mui/material";
 import VuiBox from "components/VuiBox";
+import VuiButton from "components/VuiButton";
 import VuiTypography from "components/VuiTypography";
+import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
 
 function Footer() {
   return (
-    <VuiBox
-      display="flex"
-      flexDirection={{ xs: "column", lg: "row" }}
-      justifyContent="space-between"
-      direction="row"
-      component="footer"
-      py={2}
-      pb={0}
-    >
-      <VuiBox item xs={12} sx={{ textAlign: "center" }}>
-        <VuiTypography
-          variant="button"
-          sx={{ textAlign: "center", fontWeight: "400 !important" }}
-          color="white"
-        >
-          @2022, Made with ❤️ by{" "}
-          <VuiTypography
-            ml="2px"
-            mr="2px"
-            component="a"
-            variant="button"
-            href="/home"
-            sx={{ textAlign: "center", fontWeight: "500 !important" }}
-            color="white"
+    <Card>
+      <Grid container spacing={1}>
+        <Grid item xs={0} md={0} xl={3} fullWidth>
+        </Grid>
+        <Grid item xs={12} md={12} xl={2} fullWidth>
+          <VuiBox
+            display="flex"
+            alignItems="center"
+            margin="0 auto"
           >
-            Dang Quang Vu
-          </VuiTypography>
-        </VuiTypography>
-      </VuiBox>
-      <VuiBox item xs={10}>
-        <VuiBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
-          <VuiBox mr={{ xs: "20px", lg: "46px" }}>
-            <VuiTypography
-              component="a"
-              href=""
-              variant="body2"
-              color="white"
+            <VuiBox
+              display="flex"
             >
-              Marketplace
-            </VuiTypography>
-          </VuiBox>
-          <VuiBox mr={{ xs: "20px", lg: "46px" }}>
+              <SimmmpleLogo size="34px" />
+            </VuiBox>
             <VuiTypography
-              component="a"
-              href=""
-              variant="body2"
-              color="white"
+              variant="button"
+              textGradient={true}
+              color="logo"
+              fontSize={30}
+              letterSpacing={5}
+              fontWeight="bold"
+              ml="10px"
             >
-              Blog
+              BscStart
             </VuiTypography>
           </VuiBox>
           <VuiBox>
             <VuiTypography
-              component="a"
-              href=""
-              variant="body2"
-              color="white"
+              variant="caption"
+              color="text"
+              paragraph={true}
             >
-              License
+              BscStart is a protocol aiming to provide users with the capabilities to launch <br />
+              their own token and create their own initial token sale.
+              <br />
+              <VuiTypography
+                variant="caption"
+                color="white"
+                paragraph={true}
+              >
+                Join us!
+              </VuiTypography>
             </VuiTypography>
           </VuiBox>
-        </VuiBox>
-      </VuiBox>
-    </VuiBox>
+        </Grid>
+        <Grid item xs={0} md={0} xl={1} fullWidth>
+        </Grid>
+        <Grid item xs={12} md={5} xl={3}>
+          <VuiTypography
+            variant="h5"
+            color="white"
+            fullWidth
+          >
+            PRODUCTS
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Lauchpad
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Stake
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            NFT
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Game
+          </VuiTypography>
+        </Grid>
+        <Grid item xs={12} md={5} xl={3}>
+          <VuiTypography
+            variant="h4"
+            color="white"
+            fullWidth
+          >
+            SUPPORTS
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Tutorials
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Documentation
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Twitter
+          </VuiTypography>
+          <VuiTypography
+            variant="h6"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Telegram
+          </VuiTypography>
+        </Grid>
+      </Grid>
+    </Card >
   );
 }
 
