@@ -1,5 +1,5 @@
 // @mui icons
-import { CircularProgress, Divider } from "@mui/material";
+import { CircularProgress, Divider, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import team1 from "assets/images/avatar1.png";
@@ -58,9 +58,9 @@ function Overview() {
                   <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="120px">
                     <VuiTypography fontWeight="bold" color="white" align="center">
                       BscStart - BSC NFT Marketplace
-                      <VuiTypography color="white">
-                        <Divider light />
-                      </VuiTypography>
+                      <VuiBox width="400px">
+                        <LinearProgress color="secondary" />
+                      </VuiBox>
                       <VuiTypography color="white">
                         Cooming soon ...
                       </VuiTypography>
