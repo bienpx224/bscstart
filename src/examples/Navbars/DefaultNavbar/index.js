@@ -101,13 +101,13 @@ function DefaultNavbar({ transparent, light, action }) {
               margin: "0 auto",
             }}
           >
-            BSC START
+            BscStart
           </VuiTypography>
         </VuiBox>
         <VuiBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
           <DefaultNavbarLink icon="donut_large" name="Home" route="/home" />
-          <DefaultNavbarLink icon="person" name="lauch pad" route="/lauchpad" />
-          <DefaultNavbarLink icon="account_circle" name="dex swap" route="/dexswap" />
+          <DefaultNavbarLink icon="person" name="launch pad" route="/launchpad" />
+          <DefaultNavbarLink icon="account_circle" name="swap" route="/swap" />
           <DefaultNavbarLink icon="key" name="Leaderboard" route="/leaderboard" />
         </VuiBox>
         {action &&

@@ -183,15 +183,15 @@ function Sidenav({ color, brandName, routes, ...rest }) {
                 })
               }
             >
-              <SimmmpleLogo size="24px" />
+              <SimmmpleLogo size="30px" />
             </VuiBox>
             <VuiTypography
               variant="button"
-              textGradient={true}
-              color="logo"
+              textGradient={false}
+              color="info"
               fontSize={14}
-              letterSpacing={2}
-              fontWeight="medium"
+              letterSpacing={3}
+              fontWeight="bold"
               sx={
                 ((theme) => sidenavLogoLabel(theme, { miniSidenav, transparentSidenav }),
                 {
@@ -231,11 +231,16 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           <VuiButton
             rel="noreferrer"
             variant="gradient"
-            color="primary"
+            color="info"
             fullWidth
             onClick={connect}
           >
-            Buy BS
+            <VuiTypography
+              color="secondary"
+              variant="h5"
+            >
+              Buy BS
+            </VuiTypography>
           </VuiButton>
         </VuiBox>
       </VuiBox>

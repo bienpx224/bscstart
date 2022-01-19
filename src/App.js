@@ -73,7 +73,7 @@ export default function App() {
   }, [direction]);
 
   useEffect(() => {
-    document.title = "BscStart"
+    document.title = "BscStart - BSC DeFi Launchpad"
   }, []);
 
 

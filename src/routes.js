@@ -9,12 +9,15 @@ import Faucet from "layouts/authentication/sign-in";
 
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
-import { IoIosDocument } from "react-icons/io";
 import { BsFillPersonFill } from "react-icons/bs";
-import { IoBuild } from "react-icons/io5";
-import { BsCreditCardFill } from "react-icons/bs";
-import { IoStatsChart } from "react-icons/io5";
+import { FaExchangeAlt } from "react-icons/fa";
+import { BiPhotoAlbum } from "react-icons/bi";
+import { GiTakeMyMoney } from "react-icons/gi";
 import { IoHome } from "react-icons/io5";
+import { IoGameControllerSharp } from "react-icons/io5";
+import { IoBarChart } from "react-icons/io5";
+
+
 
 const routes = [
   {
@@ -32,7 +35,7 @@ const routes = [
     name: "Launchpad",
     key: "launchpad",
     route: "/launchpad",
-    icon: <IoStatsChart size="15px" color="inherit" />,
+    icon: <IoRocketSharp size="15px" color="inherit" />,
     component: Launchpad,
     collapedSize: "10px",
     children: [
@@ -63,7 +66,7 @@ const routes = [
     name: "Trade",
     key: "trade",
     route: "/trade",
-    icon: <BsCreditCardFill size="15px" color="inherit" />,
+    icon: <FaExchangeAlt size="15px" color="inherit" />,
     component: Swap,
     noCollapse: false,
     children: [
@@ -80,10 +83,10 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Staking",
-    key: "staking",
-    route: "/staking",
-    icon: <IoBuild size="15px" color="inherit" />,
+    name: "Stake",
+    key: "stake",
+    route: "/stake",
+    icon: <GiTakeMyMoney size="15px" color="inherit" />,
     component: Staking,
     noCollapse: false,
     children: [
@@ -94,17 +97,13 @@ const routes = [
     ]
 
   },
-  {
-    type: "title",
-    title: "Comming Soon Project",
-    key: "account-pages"
-  },
+
   {
     type: "collapse",
-    name: "NFT Marketplace",
-    key: "nftmarketplace",
-    route: "/nftmarketplace",
-    icon: <BsFillPersonFill size="15px" color="inherit" />,
+    name: "NFT",
+    key: "nft",
+    route: "/nft",
+    icon: <BiPhotoAlbum size="15px" color="inherit" />,
     component: NFT,
     noCollapse: false,
     children: [
@@ -124,7 +123,7 @@ const routes = [
     name: "Game",
     key: "game",
     route: "/game",
-    icon: <IoRocketSharp size="15px" color="inherit" />,
+    icon: <IoGameControllerSharp size="15px" color="inherit" />,
     component: Game,
     noCollapse: false,
     children: [
@@ -146,7 +145,7 @@ const routes = [
     type: "collapse",
     name: "Chart",
     key: "chart",
-    icon: <IoIosDocument size="15px" color="inherit" />,
+    icon: <IoBarChart size="15px" color="info" />,
     route: "/chart",
     component: Faucet,
     noCollapse: false,

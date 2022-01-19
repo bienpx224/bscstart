@@ -2,7 +2,7 @@
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
-import { Card, Divider, LinearProgress, Stack } from "@mui/material";
+import { Card, CircularProgress, Divider, LinearProgress, Stack } from "@mui/material";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -48,40 +48,52 @@ function Dashboard() {
       <VuiBox py={3}>
         {/* {Infomation Bar} */}
         <VuiBox mb={6}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "BNB Price", fontWeight: "regular" }}
-                count="$630"
-                percentage={{ color: "success", text: "+15%" }}
-                icon={{ color: "secondary", component: <IoWallet size="22px" color="white" /> }}
-              />
-            </Grid>
-            <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "BS Token Price" }}
-                count="$0,151"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
-              />
-            </Grid>
-            <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "Total Liquidity Raised" }}
-                count="$103,4M"
-                percentage={{ color: "success", text: "+5%" }}
-                icon={{ color: "info", component: <IoWallet size="20px" color="white" /> }}
-              />
-            </Grid>
-            <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "Total Projects" }}
-                count="512"
-                percentage={{ color: "success", text: "+104" }}
-                icon={{ color: "info", component: <IoDocumentText size="20px" color="white" /> }}
-              />
-            </Grid>
-          </Grid>
+          {/* <Grid container spacing={3}> */}
+          {/*   <Grid item xs={12} md={6} xl={3}> */}
+          {/*     <MiniStatisticsCard */}
+          {/*       title={{ text: "BNB Price", fontWeight: "regular" }} */}
+          {/*       count="" */}
+          {/*       /\* percentage={{ color: "success", text: "+15%" }} *\/ */}
+          {/*       icon={{ color: "secondary", component: <IoWallet size="22px" color="white" /> }} */}
+          {/*     /> */}
+          {/*     <CircularProgress size="15px" thickness={5} /> */}
+          {/*   </Grid> */}
+          {/*   <Grid item xs={12} md={6} xl={3}> */}
+          {/*     <MiniStatisticsCard */}
+          {/*       title={{ text: "BS Token Price" }} */}
+          {/*       count="" */}
+          {/*       /\* percentage={{ color: "success", text: "+3%" }} *\/ */}
+          {/*       icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }} */}
+          {/*     /> */}
+          {/*     <CircularProgress size="15px" thickness={5} /> */}
+          {/*   </Grid> */}
+          {/*   <Grid item xs={12} md={6} xl={3}> */}
+          {/*     <MiniStatisticsCard */}
+          {/*       title={{ text: "Total Liquidity Raised" }} */}
+          {/*       count="" */}
+          {/*       /\* percentage={{ color: "success", text: "+5%" }} *\/ */}
+          {/*       icon={{ color: "info", component: <IoWallet size="20px" color="white" /> }} */}
+          {/*     /> */}
+          {/*     <CircularProgress size="15px" thickness={5} /> */}
+          {/*   </Grid> */}
+          {/*   <Grid item xs={12} md={6} xl={3}> */}
+          {/*     <MiniStatisticsCard */}
+          {/*       title={{ text: "Total Projects" }} */}
+          {/*       count="" */}
+          {/*       /\* percentage={{ color: "success", text: "+104" }} *\/ */}
+          {/*       icon={{ color: "info", component: <IoDocumentText size="20px" color="white" /> }} */}
+          {/*     /> */}
+          {/*     <CircularProgress size="15px" thickness={5} /> */}
+          {/*   </Grid> */}
+          {/* </Grid> */}
+
+          {/*   <Grid container spacing={3} alignItems="center" justifyContent="center"> */}
+          {/*     <Grid item xs={12} md={6} xl={3}> */}
+          {/*       <VuiTypography color="white"> */}
+          {/*         Countdown */}
+          {/*       </VuiTypography> */}
+          {/*     </Grid> */}
+          {/*   </Grid> */}
         </VuiBox>
       </VuiBox>
       {/* {Infomation Bar} */}
@@ -128,7 +140,7 @@ function Dashboard() {
                 fullWidth
                 onClick={connect}
               >
-                CREATE LAUNCHPAD
+                Create Launchpad
               </VuiButton>
             </Grid>
           </Grid>

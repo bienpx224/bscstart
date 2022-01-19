@@ -14,8 +14,8 @@ function SignIn() {
       title="Cooming Soon..."
       color="white"
       description="cooming soon ..."
-      premotto="BSC START:"
-      motto="LAUCHPAD FOR EVERYONE"
+      premotto="BscStart:"
+      motto="LAUNCHPAD FOR EVERYONE"
       image={bgSignIn}
     >
       <VuiBox width="400px">

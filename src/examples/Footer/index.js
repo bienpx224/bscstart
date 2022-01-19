@@ -25,10 +25,10 @@ function Footer() {
             </VuiBox>
             <VuiTypography
               variant="button"
-              textGradient={true}
-              color="logo"
+              textGradient={false}
+              color="info"
               fontSize={30}
-              letterSpacing={5}
+              letterSpacing={6}
               fontWeight="bold"
               ml="10px"
             >
@@ -37,20 +37,78 @@ function Footer() {
           </VuiBox>
           <VuiBox>
             <VuiTypography
-              variant="caption"
+              variant="body2"
               color="text"
               paragraph={true}
             >
-              BscStart is a protocol aiming to provide users with the capabilities to launch <br />
+              BscStart is a protocol aiming to provide users with the capabilities to launch
               their own token and create their own initial token sale.
-              <br />
-              <VuiTypography
-                variant="caption"
-                color="white"
-                paragraph={true}
+            </VuiTypography>
+          </VuiBox>
+          <VuiBox display="flex">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              paragraph={true}
+              mr="3px"
+            >
+              <VuiButton
+                variant="text"
+                href="https://twitter.com/BscStart"
               >
-                Join us!
-              </VuiTypography>
+                Twitter
+              </VuiButton>
+            </VuiTypography>
+            <VuiTypography
+              variant="body2"
+              color="text"
+              paragraph={true}
+              mr="3px"
+            >
+              <VuiButton
+                variant="text"
+                href="https://t.me/BscStart"
+              >
+                Telegram
+              </VuiButton>
+            </VuiTypography>
+            <VuiTypography
+              variant="body2"
+              color="text"
+              paragraph={true}
+              mr="3px"
+            >
+              <VuiButton
+                variant="text"
+                href="https://www.facebook.com/BscStart"
+              >
+                Facebook
+              </VuiButton>
+            </VuiTypography>
+            <VuiTypography
+              variant="body2"
+              color="text"
+              paragraph={true}
+              mr="3px"
+            >
+              <VuiButton
+                variant="text"
+                href="https://medium.com/@BscStart"
+              >
+                Medium
+              </VuiButton>
+            </VuiTypography>
+            <VuiTypography
+              variant="body2"
+              color="text"
+              paragraph={true}
+            >
+              <VuiButton
+                variant="text"
+                href="https://www.youtube.com/channel/UCRKCRp_ttGoPCpjid_LTgsQ"
+              >
+                Youtube
+              </VuiButton>
             </VuiTypography>
           </VuiBox>
         </Grid>
@@ -58,22 +116,22 @@ function Footer() {
         </Grid>
         <Grid item xs={12} md={5} xl={3}>
           <VuiTypography
-            variant="h5"
+            variant="body2"
             color="white"
             fullWidth
           >
-            PRODUCTS
+            Products
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
           >
-            Lauchpad
+            Launchpad
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
@@ -81,7 +139,7 @@ function Footer() {
             Stake
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
@@ -89,24 +147,32 @@ function Footer() {
             NFT
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
           >
             Game
           </VuiTypography>
+          <VuiTypography
+            variant="body2"
+            color="text"
+            fullWidth
+            fontWeight="light"
+          >
+            Chart
+          </VuiTypography>
         </Grid>
         <Grid item xs={12} md={5} xl={3}>
           <VuiTypography
-            variant="h4"
+            variant="body2"
             color="white"
             fullWidth
           >
-            SUPPORTS
+            Support
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
@@ -114,28 +180,12 @@ function Footer() {
             Tutorials
           </VuiTypography>
           <VuiTypography
-            variant="h6"
+            variant="body2"
             color="text"
             fullWidth
             fontWeight="light"
           >
             Documentation
-          </VuiTypography>
-          <VuiTypography
-            variant="h6"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Twitter
-          </VuiTypography>
-          <VuiTypography
-            variant="h6"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Telegram
           </VuiTypography>
         </Grid>
       </Grid>
