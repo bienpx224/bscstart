@@ -1,6 +1,6 @@
 
 // @mui material components
-import { CircularProgress, Divider, Grid, LinearProgress } from "@mui/material";
+import { CircularProgress, Grid, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
 
 // Vision UI Dashboard React components
@@ -22,7 +22,7 @@ function BillingInformation() {
           </Grid>
           <Grid item xs={12} md={6} xl={4}>
             <VuiButton color="dark" size="20px" fullWidth disabled>
-              Create Swap
+              Liquidity
               <CircularProgress size="15px" thickness={5} />
             </VuiButton>
           </Grid>
