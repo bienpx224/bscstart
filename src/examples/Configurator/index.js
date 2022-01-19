@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 
 // @mui material components
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
 // @mui icons
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import { FaMediumM } from "react-icons/fa";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -133,8 +135,9 @@ function Configurator() {
           </VuiBox>
 
           <VuiBox display="flex" justifyContent="center">
-            <VuiBox mr={1.5}>
+            <VuiBox mr={1.5} width="8rem">
               <VuiButton
+                fullWidth
                 component={Link}
                 href="https://twitter.com/BscStart"
                 target="_blank"
@@ -145,40 +148,66 @@ function Configurator() {
                 &nbsp; Tweet
               </VuiButton>
             </VuiBox>
-            <VuiButton
-              component={Link}
-              href=""
-              target="_blank"
-              rel="noreferrer"
-              color="dark"
-            >
-              <FacebookIcon />
-              &nbsp; Share
-            </VuiButton>
+            <VuiBox mr={1.5} width="8rem">
+              <VuiButton
+                fullWidth
+                component={Link}
+                href="https://www.facebook.com/BscStart"
+                target="_blank"
+                rel="noreferrer"
+                color="dark"
+              >
+                <FacebookIcon />
+                &nbsp; Facebook
+              </VuiButton>
+            </VuiBox>
+          </VuiBox>
+          <VuiBox display="flex" justifyContent="center" mt={3}>
+            <VuiBox mr={1.5} width="8rem">
+              <VuiButton
+                fullWidth
+                component={Link}
+                href="https://t.me/BscStart"
+                target="_blank"
+                rel="noreferrer"
+                color="dark"
+              >
+                <TelegramIcon />
+                &nbsp; Telegram
+              </VuiButton>
+            </VuiBox>
+
+            <VuiBox mr={1.5} width="8rem">
+              <VuiButton
+                fullWidth
+                component={Link}
+                href="https://www.youtube.com/channel/UCRKCRp_ttGoPCpjid_LTgsQ"
+                target="_blank"
+                rel="noreferrer"
+                color="dark"
+              >
+                <YouTubeIcon />
+                &nbsp; Youtube
+              </VuiButton>
+            </VuiBox>
+          </VuiBox>
+          <VuiBox display="flex" justifyContent="center" mt={3}>
+            <VuiBox mr={1.5} width="8rem">
+              <VuiButton
+                fullWidth
+                component={Link}
+                href="https://medium.com/@BscStart"
+                target="_blank"
+                rel="noreferrer"
+                color="dark"
+              >
+                <FaMediumM size="15px" />,
+                &nbsp; Medium
+              </VuiButton>
+            </VuiBox>
           </VuiBox>
         </VuiBox>
       </VuiBox>
-      <VuiTypography
-        variant="button"
-        sx={{ textAlign: "center", fontWeight: "400 !important" }}
-        color="white"
-      >
-        @2022, Made with ❤️ by{" "}
-        <VuiTypography
-          ml="2px"
-          mr="2px"
-          component="a"
-          variant="button"
-          href="https://twitter.com/vugomars"
-          sx={{ textAlign: "center", fontWeight: "500 !important" }}
-          color="white"
-        >
-          Dang Quang Vu
-        </VuiTypography>
-      </VuiTypography>
-
-
-
     </ConfiguratorRoot>
   );
 }

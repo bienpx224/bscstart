@@ -24,7 +24,7 @@ function SidenavCard({ color, ...rest }) {
         <VuiBox lineHeight={1} height="9rem" mt="8rem">
           <VuiButton
             component={Link}
-            href=""
+            href="https://t.me/crypto_niceguy"
             target="_blank"
             rel="noreferrer"
             size="small"
@@ -46,7 +46,7 @@ function SidenavCard({ color, ...rest }) {
             })}
             fullWidth
           >
-            DOCUMENTATION
+            Contact Us!
           </VuiButton>
         </VuiBox>
       </CardContent>

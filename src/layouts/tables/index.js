@@ -35,13 +35,13 @@ function Tables() {
           </Grid>
           <Grid item xs={12} md={6} xl={2}>
             <VuiButton color="dark" size="20px" fullWidth disabled>
-              Create Swap
+              Create Token
               <CircularProgress size="15px" thickness={5} />
             </VuiButton>
           </Grid>
           <Grid item xs={12} md={6} xl={2}>
             <VuiButton color="dark" disabled size="20px" fullWidth contained>
-              Create Token
+              Create Swap
               <CircularProgress size="15px" thickness={5} />
             </VuiButton>
 
