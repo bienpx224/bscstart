@@ -100,7 +100,7 @@ function Dashboard() {
       <VuiBox>
         <VuiBox>
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-            <VuiBox display="flex" margin="auto" pt="40px" height="100%" pb="10px">
+            <VuiBox display="flex" margin="auto" pt="0" height="100%" pb="10px">
               <VuiTypography fontWeight="extrabold" color="white" align="center">
                 <VuiTypography
                   fontWeight="bold"
