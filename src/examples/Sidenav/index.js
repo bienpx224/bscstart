@@ -32,8 +32,6 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 // Vision UI Dashboard React icons
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
 import { useWeb3 } from "providers"
-import { Button, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem } from "@mui/material";
-import { routes } from 'routes'
 
 
 
@@ -83,7 +81,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
   }, []);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
-  const renderRoutes = routes.map(({ submenu, type, name, icon, title, noCollapse, key, route, href }) => {
+  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, route, href }) => {
     let returnValue;
 
     if (type === "collapse") {

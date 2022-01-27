@@ -72,9 +72,7 @@ export default function App() {
     document.body.setAttribute("dir", direction);
   }, [direction]);
 
-  useEffect(() => {
-    document.title = "BscStart - BSC DeFi Launchpad"
-  }, []);
+
 
 
   // Setting page scroll to 0 when changing the route

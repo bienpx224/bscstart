@@ -9,7 +9,6 @@ import Faucet from "layouts/authentication/sign-in";
 
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
-import { BsFillPersonFill } from "react-icons/bs";
 import { FaExchangeAlt } from "react-icons/fa";
 import { BiPhotoAlbum } from "react-icons/bi";
 import { GiTakeMyMoney } from "react-icons/gi";

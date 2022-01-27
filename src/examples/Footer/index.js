@@ -55,7 +55,7 @@ function Footer() {
           </VuiBox>
           <VuiBox display="flex" overflow="auto">
             <VuiBox display="flex">
-              <VuiBox mr="1rem">
+              <VuiBox mr="3px">
                 <VuiButton
                   href="https://twitter.com/BscStart"
                   color="dark"
@@ -64,7 +64,7 @@ function Footer() {
                   <TwitterIcon />
                 </VuiButton>
               </VuiBox>
-              <VuiBox mr="1rem">
+              <VuiBox mr="3px">
                 <VuiButton
                   href="https://t.me/BscStart"
                   color="dark"
@@ -72,7 +72,7 @@ function Footer() {
                   <TelegramIcon />
                 </VuiButton>
               </VuiBox>
-              <VuiBox mr="1rem">
+              <VuiBox mr="3px">
                 <VuiButton
                   href="https://www.facebook.com/BscStart"
                   color="dark"
@@ -81,7 +81,7 @@ function Footer() {
                 </VuiButton>
               </VuiBox>
 
-              <VuiBox mr="1rem">
+              <VuiBox mr="3px">
                 <VuiButton
                   href="https://medium.com/@BscStart"
                   color="dark"

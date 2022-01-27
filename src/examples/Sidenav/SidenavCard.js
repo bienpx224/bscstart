@@ -9,7 +9,7 @@ import VuiButton from "components/VuiButton";
 import VuiBox from "components/VuiBox";
 
 // Custom styles for the SidenavCard
-import { card, cardContent, cardIconBox, cardIcon } from "examples/Sidenav/styles/sidenavCard";
+import { card, cardContent } from "examples/Sidenav/styles/sidenavCard";
 
 // Vision UI Dashboard React context
 import { useVisionUIController } from "context";
@@ -21,7 +21,7 @@ function SidenavCard({ color, ...rest }) {
   return (
     <Card sx={(theme) => card(theme, { miniSidenav })}>
       <CardContent sx={(theme) => cardContent(theme, { sidenavColor })}>
-        <VuiBox lineHeight={1} height="9rem" mt="8rem">
+        <VuiBox lineHeight={1} height="9rem" mt="7rem">
           <VuiButton
             component={Link}
             href="https://t.me/crypto_niceguy"
@@ -46,6 +46,7 @@ function SidenavCard({ color, ...rest }) {
             })}
             fullWidth
           >
+            Looking For A Developer!<br />
             Contact Us!
           </VuiButton>
         </VuiBox>

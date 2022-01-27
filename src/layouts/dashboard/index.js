@@ -232,7 +232,7 @@ function Dashboard() {
                           <IoIosRocket color="#fff" size="12px" />
                         </VuiBox>
                         <VuiTypography color="text" variant="button" fontWeight="medium">
-                          Trafic
+                          Traffic
                         </VuiTypography>
                       </Stack>
                       <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
