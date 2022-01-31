@@ -411,7 +411,7 @@ function Dashboard() {
               {/* {BS Economics} */}
               <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
                 <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
-                  <Card>
+                  <Card >
                     <VuiBox sx={{ height: "100%" }}>
                       <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
                         BS Tokenomics
@@ -424,102 +424,74 @@ function Dashboard() {
                           </VuiTypography>
                         </VuiTypography>
                       </VuiBox>
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
+                        80.000.000
+                      </VuiTypography>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
                         mb="6px"
                       >
-                        <VuiBox
-                          bgColor="secondary"
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
-                        >
-                          <IoWallet color="#fff" size="12px" />
-                        </VuiBox>
                         <VuiTypography color="text" variant="button" fontWeight="medium">
                           Private Sale
                         </VuiTypography>
+
                       </Stack>
-                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
-                        80.000.000
-                      </VuiTypography>
                       <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
+
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
+                        160.000.000
+                      </VuiTypography>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
                         mb="6px"
                       >
-                        <VuiBox
-                          bgColor="secondary"
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
-                        >
-                          <IoWallet color="#fff" size="12px" />
-                        </VuiBox>
                         <VuiTypography color="text" variant="button" fontWeight="medium">
                           Launchpad
                         </VuiTypography>
+
                       </Stack>
-                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
-                        160.000.000
-                      </VuiTypography>
                       <VuiProgress value={20} color="info" sx={{ background: "#2D2E5F" }} />
+
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
+                        80.000.000
+                      </VuiTypography>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
                         mb="6px"
                       >
-                        <VuiBox
-                          bgColor="secondary"
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
-                        >
-                          <IoWallet color="#fff" size="12px" />
-                        </VuiBox>
                         <VuiTypography color="text" variant="button" fontWeight="medium">
                           Team
                         </VuiTypography>
+
                       </Stack>
-                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
-                        80.000.000
-                      </VuiTypography>
                       <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
+
+
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
+                        480.000.000
+                      </VuiTypography>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
                         mb="6px"
                       >
-                        <VuiBox
-                          bgColor="secondary"
-                          display="flex"
-                          justifyContent="center"
-                          alignItems="center"
-                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
-                        >
-                          <IoWallet color="#fff" size="12px" />
-                        </VuiBox>
                         <VuiTypography color="text" variant="button" fontWeight="medium">
                           BS Ecosystem
                         </VuiTypography>
-                      </Stack>
-                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
-                        480.000.000
-                      </VuiTypography>
-                      <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
 
+                      </Stack>
+                      <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </VuiBox>
                   </Card>
-
                 </Grid>
+
+                {/* {Token Economic} */}
                 <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
                   <Card alignItems="center" justifyContent="center">
-                    <VuiBox py={4}>
+                    <VuiBox py={3}>
                       <img alt="tokeneconomic" src={TokenEconomic} width="100%" />
                     </VuiBox>
                   </Card>
@@ -528,6 +500,9 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
+        {/* {BS Economics} */}
+
+        {/* {BS Roadmap} */}
         <Grid container alignItems="center" justifyContent="center" direction="row">
           <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
             <VuiBox py={8}>
@@ -535,8 +510,8 @@ function Dashboard() {
             </VuiBox>
           </Grid>
         </Grid>
+        {/* {BS Roadmap} */}
 
-        {/* {BS Economics} */}
       </VuiBox>
 
     </DashboardLayout >
