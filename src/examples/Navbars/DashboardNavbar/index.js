@@ -44,6 +44,8 @@ import team2 from "assets/images/team-2.jpg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import { useWeb3 } from 'providers'
 import VuiButton from "components/VuiButton";
+import { useAccount } from "hooks/web3/useAccount";
+
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
@@ -52,6 +54,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
   const [openMenu, setOpenMenu] = useState(false);
   const route = useLocation().pathname.split("/").slice(1);
   const { connect, isLoading, isWeb3Loaded } = useWeb3()
+  const { account } = useAccount()
 
   useEffect(() => {
     // Setting the navbar type
@@ -149,64 +152,80 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 })}
               />
             </VuiBox>
+            {account.isAdmin && "Admin" ?
+              <IconButton sx={navbarIconButton} size="medium" onClick={connect}>
+                {/* {Button} */}
+                <VuiTypography
+                  variant="button"
+                  fontWeight="medium"
+                  color={light ? "dark" : "white"}
+                >
+                  <VuiButton
+                    color="secondary"
+                  >
+                    Hi Admin Vũ
+                  </VuiButton>
+                </VuiTypography>
+              </IconButton> : ""
+            }
             <VuiBox color={light ? "white" : "inherit"}>
               {isLoading ?
-                <IconButton sx={navbarIconButton} size="small" onClick={connect}>
-                  <Icon
-                    sx={({ palette: { dark, white } }) => ({
-                      color: light ? white.main : dark.main,
-                    })}
-                  >
-                    account_circle
-                  </Icon>
+                <IconButton sx={navbarIconButton} size="small" >
                   {/* {Button} */}
-                  <VuiTypography
-                    variant="button"
-                    fontWeight="medium"
-                    color={light ? "white" : "dark"}
-                  >
-                    Connecting...
-                  </VuiTypography>
-                </IconButton>
-                : isWeb3Loaded ?
-                  <IconButton sx={navbarIconButton} size="medium" onClick={connect}>
-                    <Icon
-                      sx={({ palette: { dark, white } }) => ({
-                        color: light ? white.main : dark.main,
-                      })}
-                    >
-                      account_circle
-                    </Icon>
-                    {/* {Button} */}
-                    <VuiTypography
-                      variant="button"
-                      fontWeight="medium"
-                      color={light ? "dark" : "white"}
-                    >
-                      <VuiButton
-                        color="success"
-                      >
-                        Connect
-                      </VuiButton>
-                    </VuiTypography>
-                  </IconButton>
-                  :
-                  <IconButton sx={navbarIconButton} size="small" onClick={() => window.open("https://metamask.io/download.html", "_blank")}>
-                    <Icon
-                      sx={({ palette: { dark, white } }) => ({
-                        color: light ? white.main : dark.main,
-                      })}
-                    >
-                      account_circle
-                    </Icon>
-                    {/* {Button} */}
+                  <VuiButton color="warning">
                     <VuiTypography
                       variant="button"
                       fontWeight="medium"
                       color={light ? "white" : "dark"}
                     >
-                      Install Metamask
+                      Connecting...
                     </VuiTypography>
+                  </VuiButton>
+                </IconButton>
+                : isWeb3Loaded ?
+                  account.data ?
+                    <IconButton sx={navbarIconButton} size="medium">
+
+                      {/* {Button} */}
+                      <VuiTypography
+                        variant="button"
+                        fontWeight="medium"
+                        color={light ? "dark" : "white"}
+                      >
+                        <VuiButton
+                          color="success"
+                        >
+                          {(account.data).slice(0, 4)}...{(account.data).slice(-4)}
+                        </VuiButton>
+                      </VuiTypography>
+                    </IconButton>
+                    :
+                    <IconButton sx={navbarIconButton} size="medium" onClick={connect}>
+                      {/* {Button} */}
+                      <VuiTypography
+                        variant="button"
+                        fontWeight="medium"
+                        color={light ? "dark" : "white"}
+                      >
+                        <VuiButton
+                          color="success"
+                        >
+                          Connect
+                        </VuiButton>
+                      </VuiTypography>
+                    </IconButton>
+                  :
+                  <IconButton sx={navbarIconButton} size="small" onClick={() => window.open("https://metamask.io/download.html", "_blank")}>
+                    {/* {Button} */}
+                    <VuiButton color="warning">
+                      <VuiTypography
+                        variant="button"
+                        fontWeight="medium"
+                        color={light ? "white" : "dark"}
+                      >
+                        Install Metamask
+                      </VuiTypography>
+                    </VuiButton>
                   </IconButton>
               }
               <IconButton
