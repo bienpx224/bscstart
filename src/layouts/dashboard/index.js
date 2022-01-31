@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, CircularProgress, Divider, LinearProgress, Stack } from "@mui/material";
 import TokenEconomic from '../../assets/images/tokeneconomic.png'
+import roadMap from '../../assets/images/roadmap.png'
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -527,6 +528,14 @@ function Dashboard() {
             </Grid>
           </Grid>
         </VuiBox>
+        <Grid container alignItems="center" justifyContent="center" direction="row">
+          <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
+            <VuiBox py={8}>
+              <img alt="roadmap" src={roadMap} width="100%" />
+            </VuiBox>
+          </Grid>
+        </Grid>
+
         {/* {BS Economics} */}
       </VuiBox>
 
