@@ -46,7 +46,7 @@ function SidenavCard({ color, ...rest }) {
             })}
             fullWidth
           >
-            Looking For A Developer!<br />
+            Looking For A Developer?<br />
             Contact Us!
           </VuiButton>
         </VuiBox>

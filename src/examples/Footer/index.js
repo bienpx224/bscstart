@@ -57,7 +57,7 @@ function Footer() {
             <VuiBox display="flex">
               <VuiBox mr="3px">
                 <VuiButton
-                  href="https://twitter.com/BscStart"
+                  onClick={() => window.open("https://twitter.com/BscStart", "_blank")}
                   color="dark"
                   width={10}
                 >
@@ -66,16 +66,16 @@ function Footer() {
               </VuiBox>
               <VuiBox mr="3px">
                 <VuiButton
-                  href="https://t.me/BscStart"
                   color="dark"
+                  onClick={() => window.open("https://t.me/BscStart", "_blank")}
                 >
                   <TelegramIcon />
                 </VuiButton>
               </VuiBox>
               <VuiBox mr="3px">
                 <VuiButton
-                  href="https://www.facebook.com/BscStart"
                   color="dark"
+                  onClick={() => window.open("https://www.facebook.com/BscStart", "_blank")}
                 >
                   <FacebookIcon />
                 </VuiButton>
@@ -83,7 +83,7 @@ function Footer() {
 
               <VuiBox mr="3px">
                 <VuiButton
-                  href="https://medium.com/@BscStart"
+                  onClick={() => window.open("https://medium.com/@BscStart", "_blank")}
                   color="dark"
                 >
                   <FaMediumM />
@@ -92,7 +92,7 @@ function Footer() {
 
               <VuiBox>
                 <VuiButton
-                  href="https://www.youtube.com/channel/UCRKCRp_ttGoPCpjid_LTgsQ"
+                  onClick={() => window.open("https://www.youtube.com/channel/UCRKCRp_ttGoPCpjid_LTgsQ", "_blank")}
                   color="dark"
                 >
                   <YouTubeIcon />
@@ -111,46 +111,57 @@ function Footer() {
           >
             Products
           </VuiTypography>
-          <VuiTypography
-            variant="body2"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Launchpad
-          </VuiTypography>
-          <VuiTypography
-            variant="body2"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Stake
-          </VuiTypography>
-          <VuiTypography
-            variant="body2"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            NFT
-          </VuiTypography>
-          <VuiTypography
-            variant="body2"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Game
-          </VuiTypography>
-          <VuiTypography
-            variant="body2"
-            color="text"
-            fullWidth
-            fontWeight="light"
-          >
-            Chart
-          </VuiTypography>
+
+          <a href="/launchpad">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              fullWidth
+              fontWeight="light"
+            >
+              Launchpad
+            </VuiTypography>
+          </a>
+          <a href="/stake">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              fullWidth
+              fontWeight="light"
+            >
+              Stake
+            </VuiTypography>
+          </a>
+          <a href="nft">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              fullWidth
+              fontWeight="light"
+            >
+              NFT
+            </VuiTypography>
+          </a>
+          <a href="game">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              fullWidth
+              fontWeight="light"
+            >
+              Game
+            </VuiTypography>
+          </a>
+          <a href="chart">
+            <VuiTypography
+              variant="body2"
+              color="text"
+              fullWidth
+              fontWeight="light"
+            >
+              Chart
+            </VuiTypography>
+          </a>
         </Grid>
         <Grid item xs={12} md={5} xl={3}>
           <VuiTypography

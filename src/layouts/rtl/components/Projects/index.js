@@ -93,20 +93,24 @@ function Projects() {
         >
 
           {/* <Table columns={columns} rows={rows} /> */}
-          <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-            <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
-              <VuiTypography fontWeight="bold" color="white" align="center">
-                BscStart - BS Stake
-                <VuiBox width="400px">
-                  <LinearProgress color="secondary" />
-                </VuiBox>
-                <VuiTypography color="white">
-                  Cooming Soon
-                </VuiTypography>
-              </VuiTypography>
-            </VuiBox>
-          </VuiBox>
 
+          <Grid container alignItems="center" justifyContent="center">
+            <Grid item xs={12} md={6} xl={4} alignItems="center" justifyContent="center">
+              <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+                <VuiBox display="flex" margin="auto" pt="100px" height="100%" pb="150px">
+                  <VuiTypography fontWeight="bold" color="white" align="center">
+                    BscStart - BS Stake
+                    <VuiBox width="300px">
+                      <LinearProgress color="secondary" />
+                    </VuiBox>
+                    <VuiTypography color="white">
+                      Cooming Soon
+                    </VuiTypography>
+                  </VuiTypography>
+                </VuiBox>
+              </VuiBox>
+            </Grid>
+          </Grid>
         </VuiBox>
       </Card>
     </VuiBox>

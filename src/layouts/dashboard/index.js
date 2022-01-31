@@ -49,7 +49,7 @@ function Dashboard() {
   let interval = useRef();
 
   const startTimer = () => {
-    const countdownDate = new Date('Feb 03, 2022 08:00:00').getTime();
+    const countdownDate = new Date('Feb 05, 2022 08:00:00').getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -111,35 +111,35 @@ function Dashboard() {
             </VuiBox>
           </VuiBox>
           <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
-            <Grid item xs={3} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="lightblue" size="20px" fullWidth>
-                <VuiTypography color="white" >
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
                   {timerDays}{' '}
-                  Day
+                  Days
                 </VuiTypography>
               </VuiButton>
             </Grid>
-            <Grid item xs={3} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="lightblue" size="20px" fullWidth>
-                <VuiTypography color="white" >
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
                   {timerHours} {' '}
-                  Hour
+                  Hours
                 </VuiTypography>
               </VuiButton>
             </Grid>
-            <Grid item xs={3} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="lightblue" size="20px" fullWidth>
-                <VuiTypography color="white" >
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
                   {timerMinutes} {' '}
-                  Minute
+                  Minutes
                 </VuiTypography>
               </VuiButton>
             </Grid>
-            <Grid item xs={3} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="lightblue" size="20px" fullWidth>
-                <VuiTypography color="white" >
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
                   {timerSeconds} {' '}
-                  Second
+                  Seconds
                 </VuiTypography>
               </VuiButton>
             </Grid>
@@ -236,7 +236,7 @@ function Dashboard() {
                 color="lightblue"
                 variant="contained"
                 fullWidth
-                onClick={connect}
+                href="/launchpad"
               >
                 Create Launchpad
               </VuiButton>

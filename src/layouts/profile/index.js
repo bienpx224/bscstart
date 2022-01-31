@@ -54,19 +54,23 @@ function Overview() {
                     NFT Collections
                   </VuiTypography>
                 </VuiBox>
-                <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-                  <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="120px">
-                    <VuiTypography fontWeight="bold" color="white" align="center">
-                      BscStart - BSC NFT Marketplace
-                      <VuiBox width="400px">
-                        <LinearProgress color="secondary" />
+                <Grid container alignItems="center" justifyContent="center">
+                  <Grid item xs={12} md={6} xl={4} alignItems="center" justifyContent="center">
+                    <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+                      <VuiBox display="flex" margin="auto" pt="70px" height="100%" pb="120px">
+                        <VuiTypography fontWeight="bold" color="white" align="center">
+                          BscStart - BSC NFT Marketplace
+                          <VuiBox width="300px">
+                            <LinearProgress color="secondary" />
+                          </VuiBox>
+                          <VuiTypography color="white">
+                            Cooming soon ...
+                          </VuiTypography>
+                        </VuiTypography>
                       </VuiBox>
-                      <VuiTypography color="white">
-                        Cooming soon ...
-                      </VuiTypography>
-                    </VuiTypography>
-                  </VuiBox>
-                </VuiBox>
+                    </VuiBox>
+                  </Grid>
+                </Grid>
 
               </VuiBox>
             </Card>
