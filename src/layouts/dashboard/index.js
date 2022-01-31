@@ -3,6 +3,7 @@
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, CircularProgress, Divider, LinearProgress, Stack } from "@mui/material";
+import TokenEconomic from '../../assets/images/tokeneconomic.png'
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -247,7 +248,7 @@ function Dashboard() {
         {/* {Hero Infomation} */}
         <Divider light />
         {/* {Project Active} */}
-        <VuiBox mb={3} mt={30}>
+        <VuiBox mb={3} mt={10}>
           <Divider light />
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0} width="100%">
             <VuiBox display="flex" margin="auto" height="100%">
@@ -406,17 +407,129 @@ function Dashboard() {
               </Grid>
               {/* {BscStart Price Chart} */}
 
+              {/* {BS Economics} */}
+              <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+                <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
+                  <Card>
+                    <VuiBox sx={{ height: "100%" }}>
+                      <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
+                        BS Tokenomics
+                      </VuiTypography>
+                      <VuiBox display="flex" alignItems="center" mb="40px">
+                        <VuiTypography variant="button" color="success" fontWeight="bold">
+                          Total Supply:{" "}
+                          <VuiTypography variant="button" color="text" fontWeight="regular">
+                            800.000.000
+                          </VuiTypography>
+                        </VuiTypography>
+                      </VuiBox>
+                      <Stack
+                        direction="row"
+                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        mb="6px"
+                      >
+                        <VuiBox
+                          bgColor="secondary"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
+                        >
+                          <IoWallet color="#fff" size="12px" />
+                        </VuiBox>
+                        <VuiTypography color="text" variant="button" fontWeight="medium">
+                          Private Sale
+                        </VuiTypography>
+                      </Stack>
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
+                        80.000.000
+                      </VuiTypography>
+                      <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
+                      <Stack
+                        direction="row"
+                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        mb="6px"
+                      >
+                        <VuiBox
+                          bgColor="secondary"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
+                        >
+                          <IoWallet color="#fff" size="12px" />
+                        </VuiBox>
+                        <VuiTypography color="text" variant="button" fontWeight="medium">
+                          Launchpad
+                        </VuiTypography>
+                      </Stack>
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
+                        160.000.000
+                      </VuiTypography>
+                      <VuiProgress value={20} color="info" sx={{ background: "#2D2E5F" }} />
+                      <Stack
+                        direction="row"
+                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        mb="6px"
+                      >
+                        <VuiBox
+                          bgColor="secondary"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
+                        >
+                          <IoWallet color="#fff" size="12px" />
+                        </VuiBox>
+                        <VuiTypography color="text" variant="button" fontWeight="medium">
+                          Team
+                        </VuiTypography>
+                      </Stack>
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
+                        80.000.000
+                      </VuiTypography>
+                      <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
+                      <Stack
+                        direction="row"
+                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        mb="6px"
+                      >
+                        <VuiBox
+                          bgColor="secondary"
+                          display="flex"
+                          justifyContent="center"
+                          alignItems="center"
+                          sx={{ borderRadius: "6px", width: "25px", height: "25px" }}
+                        >
+                          <IoWallet color="#fff" size="12px" />
+                        </VuiBox>
+                        <VuiTypography color="text" variant="button" fontWeight="medium">
+                          BS Ecosystem
+                        </VuiTypography>
+                      </Stack>
+                      <VuiTypography color="white" variant="lg" fontWeight="bold" mb="8px">
+                        480.000.000
+                      </VuiTypography>
+                      <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
+
+                    </VuiBox>
+                  </Card>
+
+                </Grid>
+                <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
+                  <Card alignItems="center" justifyContent="center">
+                    <VuiBox py={4}>
+                      <img alt="tokeneconomic" src={TokenEconomic} width="100%" />
+                    </VuiBox>
+                  </Card>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </VuiBox>
-        <VuiBox mb={3}>
-          <Grid container spacing={3}>
-
-          </Grid>
-        </VuiBox>
-        <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
-        </Grid>
+        {/* {BS Economics} */}
       </VuiBox>
+
     </DashboardLayout >
   );
 }
