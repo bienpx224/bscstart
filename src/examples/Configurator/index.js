@@ -82,14 +82,6 @@ function Configurator() {
         pb={0.8}
         px={3}
       >
-        <VuiBox>
-          <VuiTypography color="white" variant="h5" fontWeight="bold">
-            About Us
-          </VuiTypography>
-          <VuiTypography variant="body2" color="white" fontWeight="bold">
-            See our team
-          </VuiTypography>
-        </VuiBox>
 
         <Icon
           sx={({ typography: { size, fontWeightBold }, palette: { white, dark } }) => ({
@@ -106,13 +98,8 @@ function Configurator() {
         </Icon>
       </VuiBox>
 
-      <Divider light />
       <VuiBox pt={1.25} pb={3} px={3} textAlign="center">
-        <VuiTypography variant="h6" color="white">
-          Our Team
-        </VuiTypography>
 
-        <Divider light />
 
         <VuiBox mt={3} mb={2}>
           <VuiButton

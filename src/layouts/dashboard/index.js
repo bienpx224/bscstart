@@ -420,8 +420,7 @@ function Dashboard() {
                         <VuiTypography variant="button" color="success" fontWeight="bold">
                           Total Supply:{" "}
                           <VuiTypography variant="button" color="text" fontWeight="regular">
-                            800M
-
+                            800000000
                           </VuiTypography>
                         </VuiTypography>
                       </VuiBox>
