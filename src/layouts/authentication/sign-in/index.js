@@ -11,9 +11,9 @@ function SignIn() {
 
   return (
     <CoverLayout
-      title="Cooming Soon..."
+      title="Coming Soon..."
       color="white"
-      description="cooming soon ..."
+      description="coming soon ..."
       premotto="BscStart:"
       motto="LAUNCHPAD FOR EVERYONE"
       image={bgSignIn}

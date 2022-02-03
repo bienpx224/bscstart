@@ -45,7 +45,7 @@ function BillingInformation() {
                       <LinearProgress color="secondary" />
                     </VuiBox>
                     <VuiTypography color="white">
-                      Cooming Soon ....
+                      Coming Soon ....
                     </VuiTypography>
                   </VuiTypography>
                 </VuiBox>

@@ -64,7 +64,7 @@ function Overview() {
                             <LinearProgress color="secondary" />
                           </VuiBox>
                           <VuiTypography color="white">
-                            Cooming soon ...
+                            Coming soon ...
                           </VuiTypography>
                         </VuiTypography>
                       </VuiBox>

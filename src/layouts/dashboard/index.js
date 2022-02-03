@@ -147,6 +147,20 @@ function Dashboard() {
             </Grid>
           </Grid>
 
+          <Grid container spacing={3} pt={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={8} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="warning"
+                variant="contained"
+                fullWidth
+                onClick={connect}
+              >
+                Buy BS Token
+              </VuiButton>
+            </Grid>
+          </Grid>
+
           {/* {Old} */}
           {/* <Grid container spacing={3}> */}
           {/*   <Grid item xs={12} md={6} xl={2}> */}
