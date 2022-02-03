@@ -75,12 +75,55 @@ function Dashboard() {
       }
 
     }, 1000);
+
   }
 
   useEffect(() => {
     startTimer();
     return () => {
       clearInterval(interval.current);
+    }
+  });
+
+  const [timerDays2, setTimerDays2] = useState('00');
+  const [timerHours2, setTimerHours2] = useState('00');
+  const [timerMinutes2, setTimerMinutes2] = useState('00');
+  const [timerSeconds2, setTimerSeconds2] = useState('00');
+
+  let interval2 = useRef();
+
+  const startTimer2 = () => {
+    const countdownDate = new Date('Feb 15, 2022 08:00:00').getTime();
+
+    interval2 = setInterval(() => {
+      const now = new Date().getTime();
+      const distance2 = countdownDate - now;
+
+
+      const days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+      const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+      const minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+      if (distance2 < 0) {
+        // stop our time
+        clearInterval(interval2.current)
+      } else {
+        // update time
+        setTimerDays2(days2)
+        setTimerHours2(hours2)
+        setTimerMinutes2(minutes2)
+        setTimerSeconds2(seconds2)
+      }
+
+    }, 1000);
+
+  }
+
+  useEffect(() => {
+    startTimer2();
+    return () => {
+      clearInterval(interval2.current);
     }
   });
 
@@ -106,12 +149,25 @@ function Dashboard() {
                   color="white"
                   variant="h4"
                 >
-                  is coming...
+                  is coming...<br />
                 </VuiTypography>
-
               </VuiTypography>
             </VuiBox>
           </VuiBox>
+          <Grid container spacing={3} pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={8} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="primary"
+                variant="gradient"
+                fullWidth
+              >
+                Stage 1 (10 days) <br />
+                1 BNB = 100000 BS
+              </VuiButton>
+            </Grid>
+          </Grid>
+
           <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" size="20px" fullWidth>
@@ -147,11 +203,61 @@ function Dashboard() {
             </Grid>
           </Grid>
 
+
+          <Grid container spacing={3} pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={8} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="primary"
+                variant="gradient"
+                fullWidth
+              >
+                Stage 2 (10 days) <br />
+                1 BNB = 85000 BS
+              </VuiButton>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
+                  {timerDays2} {' '}
+                  Days
+                </VuiTypography>
+              </VuiButton>
+            </Grid>
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
+                  {timerHours2} {' '}
+                  Hours
+                </VuiTypography>
+              </VuiButton>
+            </Grid>
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
+                  {timerMinutes2} {' '}
+                  Minutes
+                </VuiTypography>
+              </VuiButton>
+            </Grid>
+            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
+              <VuiButton color="warning" size="20px" fullWidth>
+                <VuiTypography color="secondary" variant="h7">
+                  {timerSeconds2} {' '}
+                  Seconds
+                </VuiTypography>
+              </VuiButton>
+            </Grid>
+          </Grid>
+
           <Grid container spacing={3} pt={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={8} md={5} xl={3}>
               <VuiButton
                 size="large"
-                color="warning"
+                color="success"
                 variant="contained"
                 fullWidth
                 onClick={connect}
