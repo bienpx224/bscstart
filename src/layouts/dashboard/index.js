@@ -1,4 +1,3 @@
-
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
@@ -158,19 +157,20 @@ function Dashboard() {
             <Grid item xs={10} md={5} xl={3}>
               <VuiButton
                 size="large"
-                color="warning"
-                variant="gradient"
+                color="success"
                 fullWidth
               >
-                Stage 1 (10 days) <br />
-                1 BNB = 100000 BS
+                <VuiTypography color="secondary" variant="h7">
+                  Stage 1 (10 days) <br />
+                  1 BNB = 100000 BS
+                </VuiTypography>
               </VuiButton>
             </Grid>
           </Grid>
 
           <Grid container alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="success" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerDays}{' '}
                   Days
@@ -178,7 +178,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="success" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerHours} {' '}
                   Hours
@@ -186,7 +186,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="success" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerMinutes} {' '}
                   Minutes
@@ -194,7 +194,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="success" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerSeconds} {' '}
                   Seconds
@@ -221,19 +221,21 @@ function Dashboard() {
             <Grid item xs={10} md={5} xl={3}>
               <VuiButton
                 size="large"
-                color="primary"
+                color="warning"
                 variant="gradient"
                 fullWidth
               >
-                Stage 2 (10 days) <br />
-                1 BNB = 85000 BS
+                <VuiTypography color="secondary" variant="h7">
+                  Stage 2 (10 days) <br />
+                  1 BNB = 85000 BS
+                </VuiTypography>
               </VuiButton>
             </Grid>
           </Grid>
 
           <Grid container alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
+              <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerDays2} {' '}
                   Days
@@ -241,7 +243,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
+              <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerHours2} {' '}
                   Hours
@@ -249,7 +251,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
+              <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerMinutes2} {' '}
                   Minutes
@@ -257,7 +259,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
+              <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerSeconds2} {' '}
                   Seconds
