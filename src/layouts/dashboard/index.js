@@ -203,19 +203,19 @@ function Dashboard() {
             </Grid>
           </Grid>
 
-          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={10} md={5} xl={3}>
-              <VuiButton
-                size="large"
-                color="success"
-                variant="contained"
-                fullWidth
-                onClick={connect}
-              >
-                Buy BS Token
-              </VuiButton>
-            </Grid>
-          </Grid>
+          {/* <Grid container pt={5} direction="row" justifyContent="center" alignItems="center"> */}
+          {/*   <Grid item xs={10} md={5} xl={3}> */}
+          {/*     <VuiButton */}
+          {/*       size="large" */}
+          {/*       color="success" */}
+          {/*       variant="contained" */}
+          {/*       fullWidth */}
+          {/*       onClick={connect} */}
+          {/*     > */}
+          {/*       Buy BS Token */}
+          {/*     </VuiButton> */}
+          {/*   </Grid> */}
+          {/* </Grid> */}
 
           <Grid container pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
