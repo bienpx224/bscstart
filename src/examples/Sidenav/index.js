@@ -237,10 +237,28 @@ function Sidenav({ color, brandName, routes, ...rest }) {
               color="secondary"
               variant="h5"
             >
-              Buy BS
+              Buy Now
             </VuiTypography>
           </VuiButton>
         </VuiBox>
+
+        <VuiBox mt={2}>
+          <VuiButton
+            rel="noreferrer"
+            variant="gradient"
+            color="primary"
+            fullWidth
+            onClick={() => window.open("https://bscscan.com/address/0xcab391a3566eaf51341211ce163200edda723357", "_blank")}
+          >
+            <VuiTypography
+              color="white"
+              variant="h6"
+            >
+              View on BscScan
+            </VuiTypography>
+          </VuiButton>
+        </VuiBox>
+
       </VuiBox>
     </SidenavRoot >
   );

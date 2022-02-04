@@ -155,10 +155,10 @@ function Dashboard() {
             </VuiBox>
           </VuiBox>
           <Grid container spacing={3} pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={8} md={5} xl={3}>
+            <Grid item xs={10} md={5} xl={3}>
               <VuiButton
                 size="large"
-                color="primary"
+                color="warning"
                 variant="gradient"
                 fullWidth
               >
@@ -168,7 +168,7 @@ function Dashboard() {
             </Grid>
           </Grid>
 
-          <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+          <Grid container alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
@@ -203,9 +203,22 @@ function Dashboard() {
             </Grid>
           </Grid>
 
+          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={10} md={5} xl={3}>
+              <VuiButton
+                size="large"
+                color="success"
+                variant="contained"
+                fullWidth
+                onClick={connect}
+              >
+                Buy BS Token
+              </VuiButton>
+            </Grid>
+          </Grid>
 
-          <Grid container spacing={3} pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={8} md={5} xl={3}>
+          <Grid container pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={10} md={5} xl={3}>
               <VuiButton
                 size="large"
                 color="primary"
@@ -218,9 +231,9 @@ function Dashboard() {
             </Grid>
           </Grid>
 
-          <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+          <Grid container alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerDays2} {' '}
                   Days
@@ -228,7 +241,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerHours2} {' '}
                   Hours
@@ -236,7 +249,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerMinutes2} {' '}
                   Minutes
@@ -244,7 +257,7 @@ function Dashboard() {
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="warning" size="20px" fullWidth>
+              <VuiButton color="primary" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
                   {timerSeconds2} {' '}
                   Seconds
@@ -253,19 +266,7 @@ function Dashboard() {
             </Grid>
           </Grid>
 
-          <Grid container spacing={3} pt={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={8} md={5} xl={3}>
-              <VuiButton
-                size="large"
-                color="success"
-                variant="contained"
-                fullWidth
-                onClick={connect}
-              >
-                Buy BS Token
-              </VuiButton>
-            </Grid>
-          </Grid>
+
 
           {/* {Old} */}
           {/* <Grid container spacing={3}> */}
