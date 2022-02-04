@@ -246,7 +246,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           <VuiButton
             rel="noreferrer"
             variant="gradient"
-            color="primary"
+            color="warning"
             fullWidth
             onClick={() => window.open("https://bscscan.com/address/0xcab391a3566eaf51341211ce163200edda723357", "_blank")}
           >
