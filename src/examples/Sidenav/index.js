@@ -228,14 +228,13 @@ function Sidenav({ color, brandName, routes, ...rest }) {
         <VuiBox mt={2}>
           <VuiButton
             rel="noreferrer"
-            variant="gradient"
-            color="info"
+            color="success"
             fullWidth
             onClick={connect}
           >
             <VuiTypography
-              color="secondary"
-              variant="h5"
+              color="white"
+              variant="h6"
             >
               Buy Now
             </VuiTypography>
