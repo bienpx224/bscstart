@@ -153,69 +153,20 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
-          <Grid container spacing={3} pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
+
+          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
               <VuiButton
                 size="large"
                 color="success"
+                variant="contained"
                 fullWidth
+                onClick={connect}
               >
-                <VuiTypography color="secondary" variant="h7">
-                  Stage 1 (10 days) <br />
-                  1 BNB = 100000 BS
-                </VuiTypography>
+                Buy BS Token
               </VuiButton>
             </Grid>
           </Grid>
-
-          <Grid container alignItems="center" justifyContent="center" direction="row">
-            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="success" size="20px" fullWidth>
-                <VuiTypography color="secondary" variant="h7">
-                  {timerDays}{' '}
-                  Days
-                </VuiTypography>
-              </VuiButton>
-            </Grid>
-            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="success" size="20px" fullWidth>
-                <VuiTypography color="secondary" variant="h7">
-                  {timerHours} {' '}
-                  Hours
-                </VuiTypography>
-              </VuiButton>
-            </Grid>
-            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="success" size="20px" fullWidth>
-                <VuiTypography color="secondary" variant="h7">
-                  {timerMinutes} {' '}
-                  Minutes
-                </VuiTypography>
-              </VuiButton>
-            </Grid>
-            <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
-              <VuiButton color="success" size="20px" fullWidth>
-                <VuiTypography color="secondary" variant="h7">
-                  {timerSeconds} {' '}
-                  Seconds
-                </VuiTypography>
-              </VuiButton>
-            </Grid>
-          </Grid>
-
-          {/* <Grid container pt={5} direction="row" justifyContent="center" alignItems="center"> */}
-          {/*   <Grid item xs={10} md={5} xl={3}> */}
-          {/*     <VuiButton */}
-          {/*       size="large" */}
-          {/*       color="success" */}
-          {/*       variant="contained" */}
-          {/*       fullWidth */}
-          {/*       onClick={connect} */}
-          {/*     > */}
-          {/*       Buy BS Token */}
-          {/*     </VuiButton> */}
-          {/*   </Grid> */}
-          {/* </Grid> */}
 
           <Grid container pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
