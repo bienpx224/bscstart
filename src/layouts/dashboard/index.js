@@ -13,7 +13,6 @@ import VuiProgress from "components/VuiProgress";
 // Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import linearGradient from "assets/theme/functions/linearGradient";
 
 // Vision UI Dashboard React base styles
@@ -34,6 +33,7 @@ import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions
 import VuiButton from "components/VuiButton";
 import { useWeb3 } from 'providers'
 import { useEffect, useRef, useState } from "react";
+import VuiInput from "components/VuiInput";
 
 
 
@@ -84,19 +84,19 @@ function Dashboard() {
       clearInterval(interval.current);
     }
   });
-  
-  const buyToken = async ()=>{
+
+  const buyToken = async () => {
     try {
       const currentAccount = await provider.request({ method: "eth_requestAccounts" })
       contract.methods.buyToken()
-      .send({
-        from:currentAccount[0],
-        value:parseInt(qtyBsc)*1000000000000000000
-      });
+        .send({
+          from: currentAccount[0],
+          value: parseInt(qtyBsc) * 1000000000000000000
+        });
     } catch {
       location.reload()
     }
-    }
+  }
   const [timerDays2, setTimerDays2] = useState('00');
   const [timerHours2, setTimerHours2] = useState('00');
   const [timerMinutes2, setTimerMinutes2] = useState('00');
@@ -110,7 +110,6 @@ function Dashboard() {
     interval2 = setInterval(() => {
       const now = new Date().getTime();
       const distance2 = countdownDate - now;
-
 
       const days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
       const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
@@ -127,9 +126,7 @@ function Dashboard() {
         setTimerMinutes2(minutes2)
         setTimerSeconds2(seconds2)
       }
-
     }, 1000);
-
   }
 
   useEffect(() => {
@@ -166,25 +163,28 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
-          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
+
+          <Grid container pt={1} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
-            <label>
-              Qty Bsc:
-              <input type="text"  pattern="[0-9]*" value={qtyBsc} onChange={(event)=>{setQtyBsc(event.target.value)}} />
-            </label>
+              <VuiInput
+                icon={{ direction: "left" }}
+                placeholder="Amount"
+                type="text" pattern="[0-9]*" value={qtyBsc} onChange={(event) => { setQtyBsc(event.target.value) }}
+              />
             </Grid>
-          </Grid>
-          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={10} md={5} xl={3}>
-              <VuiButton
-                size="large"
-                color="success"
-                variant="contained"
-                fullWidth
-                onClick={buyToken}
-              >
-                Buy BS Token
-              </VuiButton>
+
+            <Grid container pt={1} direction="row" justifyContent="center" alignItems="center">
+              <Grid item xs={10} md={5} xl={3}>
+                <VuiButton
+                  size="large"
+                  color="success"
+                  variant="contained"
+                  fullWidth
+                  onClick={buyToken}
+                >
+                  Buy BS Token
+                </VuiButton>
+              </Grid>
             </Grid>
           </Grid>
 
