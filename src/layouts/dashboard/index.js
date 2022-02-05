@@ -50,7 +50,7 @@ function Dashboard() {
   let interval = useRef();
 
   const startTimer = () => {
-    const countdownDate = new Date('Feb 05, 2022 09:00:00').getTime();
+    const countdownDate = new Date('Feb 05, 2022 10:00:00').getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -92,7 +92,7 @@ function Dashboard() {
   let interval2 = useRef();
 
   const startTimer2 = () => {
-    const countdownDate = new Date('Feb 15, 2022 09:00:00').getTime();
+    const countdownDate = new Date('Feb 15, 2022 10:00:00').getTime();
 
     interval2 = setInterval(() => {
       const now = new Date().getTime();
