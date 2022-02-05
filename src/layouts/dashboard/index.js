@@ -499,7 +499,7 @@ function Dashboard() {
                     </VuiTypography>
                     <VuiBox display="flex" alignItems="center" mb="40px">
                       <VuiTypography variant="button" color="success" fontWeight="bold">
-                        +24,2% more{" "}
+                        +24,3% more{" "}
                         <VuiTypography variant="button" color="text" fontWeight="regular">
                           in 2022
                         </VuiTypography>
