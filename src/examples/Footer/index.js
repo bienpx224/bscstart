@@ -58,7 +58,7 @@ function Footer() {
               <VuiBox mr="3px">
                 <VuiButton
                   onClick={() => window.open("https://twitter.com/BscStart", "_blank")}
-                  color="dark"
+                  color="light"
                   width={10}
                 >
                   <TwitterIcon />
@@ -66,7 +66,7 @@ function Footer() {
               </VuiBox>
               <VuiBox mr="3px">
                 <VuiButton
-                  color="dark"
+                  color="light"
                   onClick={() => window.open("https://t.me/BscStart", "_blank")}
                 >
                   <TelegramIcon />
@@ -74,7 +74,7 @@ function Footer() {
               </VuiBox>
               <VuiBox mr="3px">
                 <VuiButton
-                  color="dark"
+                  color="light"
                   onClick={() => window.open("https://www.facebook.com/BscStart", "_blank")}
                 >
                   <FacebookIcon />
@@ -84,7 +84,7 @@ function Footer() {
               <VuiBox mr="3px">
                 <VuiButton
                   onClick={() => window.open("https://medium.com/@BscStart", "_blank")}
-                  color="dark"
+                  color="light"
                 >
                   <FaMediumM />
                 </VuiButton>
@@ -93,7 +93,7 @@ function Footer() {
               <VuiBox>
                 <VuiButton
                   onClick={() => window.open("https://www.youtube.com/channel/UCRKCRp_ttGoPCpjid_LTgsQ", "_blank")}
-                  color="dark"
+                  color="light"
                 >
                   <YouTubeIcon />
                 </VuiButton>
