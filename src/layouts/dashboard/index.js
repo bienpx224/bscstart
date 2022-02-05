@@ -40,12 +40,13 @@ import { useEffect, useRef, useState } from "react";
 function Dashboard() {
   const { gradients } = colors;
   const { cardContent } = gradients;
-  const { connect } = useWeb3();
+  const { connect, contract, provider } = useWeb3();
 
   const [timerDays, setTimerDays] = useState('00');
   const [timerHours, setTimerHours] = useState('00');
   const [timerMinutes, setTimerMinutes] = useState('00');
   const [timerSeconds, setTimerSeconds] = useState('00');
+  const [qtyBsc, setQtyBsc] = useState(0);
 
   let interval = useRef();
 
@@ -83,7 +84,19 @@ function Dashboard() {
       clearInterval(interval.current);
     }
   });
-
+  
+  const buyToken = async ()=>{
+    try {
+      const currentAccount = await provider.request({ method: "eth_requestAccounts" })
+      contract.methods.buyToken()
+      .send({
+        from:currentAccount[0],
+        value:parseInt(qtyBsc)*1000000000000000000
+      });
+    } catch {
+      location.reload()
+    }
+    }
   const [timerDays2, setTimerDays2] = useState('00');
   const [timerHours2, setTimerHours2] = useState('00');
   const [timerMinutes2, setTimerMinutes2] = useState('00');
@@ -153,7 +166,14 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
-
+          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={10} md={5} xl={3}>
+            <label>
+              Qty Bsc:
+              <input type="text"  pattern="[0-9]*" value={qtyBsc} onChange={(event)=>{setQtyBsc(event.target.value)}} />
+            </label>
+            </Grid>
+          </Grid>
           <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
               <VuiButton
@@ -161,12 +181,13 @@ function Dashboard() {
                 color="success"
                 variant="contained"
                 fullWidth
-                onClick={connect}
+                onClick={buyToken}
               >
                 Buy BS Token
               </VuiButton>
             </Grid>
           </Grid>
+
 
           <Grid container pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
