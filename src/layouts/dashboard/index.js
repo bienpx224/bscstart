@@ -163,11 +163,8 @@ function Dashboard() {
               </VuiTypography>
             </VuiBox>
           </VuiBox>
-          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={10} md={5} xl={3}>
-            </Grid>
-          </Grid>
-          <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
+
+          <Grid container pt={1} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
               <VuiInput
                 icon={{ direction: "left" }}
