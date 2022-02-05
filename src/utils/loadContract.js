@@ -1,5 +1,5 @@
 
-const TOKEN_ADDRESS = "0xe66403B45D4B4aB5253136f6Ec7E5a530eCB455b";
+const TOKEN_ADDRESS = "0xF6C8f7D4E2DB79856B365d48017BC026761A9822";
 const TOKEN_ABI = [
 	{
 		"inputs": [],
@@ -9,13 +9,7 @@ const TOKEN_ABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "tokenAddress",
-				"type": "address"
-			}
-		],
+		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
@@ -62,6 +56,19 @@ const TOKEN_ABI = [
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "tokenAddress",
+				"type": "address"
+			}
+		],
+		"name": "setTokenAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "newOwner",
 				"type": "address"
 			}
@@ -74,6 +81,13 @@ const TOKEN_ABI = [
 	{
 		"inputs": [],
 		"name": "withdrawETH",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdrawToken",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
