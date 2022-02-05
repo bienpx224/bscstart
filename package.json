@@ -5,6 +5,9 @@
   "description": "Creative Vu",
   "dependencies": {
     "@delowar/react-circle-progressbar": "^1.0.0",
+    "@drizzle/react-components": "^1.5.3",
+    "@drizzle/react-plugin": "^1.5.3",
+    "@drizzle/store": "^1.5.3",
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
@@ -13,12 +16,13 @@
     "@mui/material": "5.1.1",
     "@mui/styled-engine": "5.1.1",
     "@mui/styles": "^5.2.0",
-    "@openzeppelin/contracts": "^3.4.0",
+    "@openzeppelin/contracts": "^4.4.2",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.1.0",
     "@testing-library/user-event": "12.1.10",
-    "@truffle/hdwallet-provider": "^2.0.1",
     "apexcharts": "^3.30.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bn": "^0.3.1",
     "chroma-js": "2.1.2",
     "eslint": "^7.11.0",
     "prop-types": "15.7.2",
@@ -36,9 +40,13 @@
     "swr": "^1.2.0",
     "uuid": "8.3.2",
     "web-vitals": "1.0.1",
+    "@truffle/hdwallet-provider": "^2.0.1",
     "web3": "^1.6.1"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-bignumber": "^3.0.0",
+    "coveralls": "^3.1.1",
     "truffle-plugin-verify": "^0.5.21"
   },
   "scripts": {
@@ -49,21 +57,10 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }

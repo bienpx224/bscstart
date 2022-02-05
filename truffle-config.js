@@ -1,7 +1,9 @@
+const dotenv = require('dotenv').config()
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const privateKeys = ['0x684fbe7489e86e5fe56e310127e35c515e415595475a4fd532225ad7a5d4d383'];
+const privateKeys = [dotenv.privateKey];
+
 module.exports = {
-  contracts_build_directory: "./public/contracts",
+  contract_build_directory: "./src/contracts",
   networks: {
     bsc: {
       provider: () => new HDWalletProvider(
@@ -21,12 +23,7 @@ module.exports = {
       gas: 6897127,
       network_id: 97,
       skipDryRun: true
-    }
-  },
-
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    // timeout: 100000
+    },
   },
 
   // Configure your compilers
