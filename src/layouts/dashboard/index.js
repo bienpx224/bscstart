@@ -165,7 +165,7 @@ function Dashboard() {
           </VuiBox>
           <Grid container alignItems="center" pb={3} justifyContent="center" direction="row">
             <Grid item xs={10} md={5} xl={3} alignItems="center" justifyContent="center">
-              <VuiButton color="dark" size="20px" fullWidth>
+              <VuiButton color="orange" size="20px" fullWidth>
                 <VuiTypography color="white" variant="h7">
                   {timerSeconds} {' '}
                   Minutes Remaining
@@ -538,7 +538,7 @@ function Dashboard() {
                         mb="6px"
                       >
                         <VuiTypography color="text" variant="lg" fontWeight="medium">
-                          Presale Sale: {' '}
+                          Presale: {' '}
                           <VuiTypography color="white" variant="lg" fontWeight="bold">
                             80M
                           </VuiTypography>

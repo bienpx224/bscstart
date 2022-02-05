@@ -49,8 +49,8 @@ export default {
   },
 
   orange: {
-    main: "#f6ad55",
-    focus: "#f6ad55",
+    main: "#600191",
+    focus: "#600191",
   },
 
   grey: {
@@ -106,7 +106,7 @@ export default {
   },
 
   dark: {
-    main: "#600191",
+    main: "#344767",
     focus: "#121241",
     body: "#030c1d",
   },
