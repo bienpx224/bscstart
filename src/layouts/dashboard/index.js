@@ -156,17 +156,28 @@ function Dashboard() {
 
           <Grid container pt={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
-              <VuiButton
-                size="large"
-                color="success"
-                variant="contained"
-                fullWidth
-                onClick={connect}
-              >
-                Buy BS Token
-              </VuiButton>
+              <VuiInput
+                icon={{ direction: "left" }}
+                placeholder="Amount"
+                type="text" pattern="[0-9]*" value={qtyBsc} onChange={(event) => { setQtyBsc(event.target.value) }}
+              />
+            </Grid>
+
+            <Grid container pt={1} direction="row" justifyContent="center" alignItems="center">
+              <Grid item xs={10} md={5} xl={3}>
+                <VuiButton
+                  size="large"
+                  color="success"
+                  variant="contained"
+                  fullWidth
+                  onClick={buyToken}
+                >
+                  Buy BS Token
+                </VuiButton>
+              </Grid>
             </Grid>
           </Grid>
+
 
           <Grid container pt={5} pb={5} direction="row" justifyContent="center" alignItems="center">
             <Grid item xs={10} md={5} xl={3}>
