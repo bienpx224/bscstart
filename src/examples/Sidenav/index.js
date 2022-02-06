@@ -246,7 +246,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             rel="noreferrer"
             color="warning"
             fullWidth
-            onClick={() => window.open("https://bscscan.com/address/0xefde80eefdf1938672fcc42793d81c4bfa3f4ebb", "_blank")}
+            onClick={() => window.open("https://bscscan.com/address/0xe738634cf24dfc981517675075fc9677c94e6e9b", "_blank")}
           >
             <VuiTypography
               color="white"
