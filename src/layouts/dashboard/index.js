@@ -91,7 +91,7 @@ function Dashboard() {
       contract.methods.buyToken()
         .send({
           from: currentAccount[0],
-          value: parseInt(qtyBsc) * 1000000000000000000
+          value: parseInt(qtyBsc * 1000000000000000000)
         });
     } catch {
       location.reload()
