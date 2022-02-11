@@ -2,8 +2,8 @@
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, CircularProgress, Divider, LinearProgress, Stack } from "@mui/material";
-import TokenEconomic from '../../assets/images/tokeneconomic.png'
-import roadMap from '../../assets/images/roadmap.png'
+import TokenEconomic from "../../assets/images/tokeneconomic.png";
+import roadMap from "../../assets/images/roadmap.png";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -31,111 +31,104 @@ import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptio
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 import VuiButton from "components/VuiButton";
-import { useWeb3 } from 'providers'
+import { useWeb3 } from "providers";
 import { useEffect, useRef, useState } from "react";
 import VuiInput from "components/VuiInput";
-
-
 
 function Dashboard() {
   const { gradients } = colors;
   const { cardContent } = gradients;
   const { connect, contract, provider } = useWeb3();
 
-  const [timerDays, setTimerDays] = useState('00');
-  const [timerHours, setTimerHours] = useState('00');
-  const [timerMinutes, setTimerMinutes] = useState('00');
-  const [timerSeconds, setTimerSeconds] = useState('00');
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
   const [qtyBsc, setQtyBsc] = useState(0);
 
   let interval = useRef();
 
   const startTimer = () => {
-    const countdownDate = new Date('Feb 15, 2022 10:00:00').getTime();
+    const countdownDate = new Date("Feb 15, 2022 10:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
 
-
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance / (1000 * 60)));
+      const seconds = Math.floor(distance / (1000 * 60));
 
       if (distance < 0) {
         // stop our time
-        clearInterval(interval.current)
+        clearInterval(interval.current);
       } else {
         // update time
-        setTimerDays(days)
-        setTimerHours(hours)
-        setTimerMinutes(minutes)
-        setTimerSeconds(seconds)
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
       }
-
     }, 1000);
-
-  }
+  };
 
   useEffect(() => {
     startTimer();
     return () => {
       clearInterval(interval.current);
-    }
+    };
   });
 
   const buyToken = async () => {
     try {
-      const currentAccount = await provider.request({ method: "eth_requestAccounts" })
-      contract.methods.buyToken()
-        .send({
-          from: currentAccount[0],
-          value: parseInt(qtyBsc * 1000000000000000000)
-        });
+      const currentAccount = await provider.request({ method: "eth_requestAccounts" });
+      contract.methods.buyToken().send({
+        from: currentAccount[0],
+        value: parseInt(qtyBsc * 1000000000000000000),
+      });
     } catch {
-      location.reload()
+      location.reload();
     }
-  }
-  const [timerDays2, setTimerDays2] = useState('00');
-  const [timerHours2, setTimerHours2] = useState('00');
-  const [timerMinutes2, setTimerMinutes2] = useState('00');
-  const [timerSeconds2, setTimerSeconds2] = useState('00');
+  };
+  const [timerDays2, setTimerDays2] = useState("00");
+  const [timerHours2, setTimerHours2] = useState("00");
+  const [timerMinutes2, setTimerMinutes2] = useState("00");
+  const [timerSeconds2, setTimerSeconds2] = useState("00");
 
   let interval2 = useRef();
 
   const startTimer2 = () => {
-    const countdownDate = new Date('Feb 15, 2022 10:00:00').getTime();
+    const countdownDate = new Date("Feb 15, 2022 10:00:00").getTime();
 
     interval2 = setInterval(() => {
       const now = new Date().getTime();
       const distance2 = countdownDate - now;
 
       const days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
-      const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+      const hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
       const seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
 
       if (distance2 < 0) {
         // stop our time
-        clearInterval(interval2.current)
+        clearInterval(interval2.current);
       } else {
         // update time
-        setTimerDays2(days2)
-        setTimerHours2(hours2)
-        setTimerMinutes2(minutes2)
-        setTimerSeconds2(seconds2)
+        setTimerDays2(days2);
+        setTimerHours2(hours2);
+        setTimerMinutes2(minutes2);
+        setTimerSeconds2(seconds2);
       }
     }, 1000);
-  }
+  };
 
   useEffect(() => {
     startTimer2();
     return () => {
       clearInterval(interval2.current);
-    }
+    };
   });
-
 
   return (
     <DashboardLayout>
@@ -146,18 +139,10 @@ function Dashboard() {
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
             <VuiBox display="flex" margin="auto" pt="0" height="100%" pb="10px">
               <VuiTypography fontWeight="extrabold" color="white" align="center">
-                <VuiTypography
-                  fontWeight="bold"
-                  color="info"
-                  variant="h3"
-                >
+                <VuiTypography fontWeight="bold" color="info" variant="h3">
                   Presale Stage 1 <br />
                 </VuiTypography>
-                <VuiTypography
-                  fontWeight="medium"
-                  color="warning"
-                  variant="h4"
-                >
+                <VuiTypography fontWeight="medium" color="warning" variant="h4">
                   (1 BNB = 100000 BS)
                 </VuiTypography>
               </VuiTypography>
@@ -167,19 +152,30 @@ function Dashboard() {
             <Grid item xs={10} md={5} xl={3} alignItems="center" justifyContent="center">
               <VuiButton color="orange" size="20px" fullWidth>
                 <VuiTypography color="white" variant="h7">
-                  {timerSeconds} {' '}
-                  Minutes Remaining
+                  {timerSeconds} Minutes Remaining
                 </VuiTypography>
               </VuiButton>
             </Grid>
           </Grid>
 
-          <Grid container pt={1} spacing={3} direction="row" justifyContent="center" alignItems="center">
+          <Grid
+            container
+            pt={1}
+            spacing={3}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Grid item xs={10} md={3} xl={2}>
               <VuiInput
                 icon={{ direction: "left" }}
-                placeholder="Amount"
-                type="text" pattern="[0-9]*" value={qtyBsc} onChange={(event) => { setQtyBsc(event.target.value) }}
+                placeholder="Amount BNB"
+                type="text"
+                pattern="[0-9]*"
+                value={qtyBsc}
+                onChange={(event) => {
+                  setQtyBsc(event.target.value);
+                }}
               />
             </Grid>
 
@@ -199,61 +195,46 @@ function Dashboard() {
           <VuiBox component="ul" display="flex" flexDirection="column" p={3} m={0}>
             <VuiBox display="flex" margin="auto" pt="0" height="100%" pb="10px">
               <VuiTypography fontWeight="extrabold" color="white" align="center">
-                <VuiTypography
-                  fontWeight="bold"
-                  color="lightblue"
-                  variant="h3"
-                >
+                <VuiTypography fontWeight="bold" color="lightblue" variant="h3">
                   Presale Stage 2 <br />
                 </VuiTypography>
-                <VuiTypography
-                  fontWeight="medium"
-                  color="warning"
-                  variant="h4"
-                >
+                <VuiTypography fontWeight="medium" color="warning" variant="h4">
                   (1 BNB = 85000 BS)
                 </VuiTypography>
               </VuiTypography>
             </VuiBox>
           </VuiBox>
 
-
           <Grid container alignItems="center" justifyContent="center" direction="row">
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
-                  {timerDays2} {' '}
-                  Days
+                  {timerDays2} Days
                 </VuiTypography>
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
-                  {timerHours2} {' '}
-                  Hours
+                  {timerHours2} Hours
                 </VuiTypography>
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
-                  {timerMinutes2} {' '}
-                  Minutes
+                  {timerMinutes2} Minutes
                 </VuiTypography>
               </VuiButton>
             </Grid>
             <Grid item xs={2} md={2} xl={2} alignItems="center" justifyContent="center">
               <VuiButton color="warning" variant="gradient" size="20px" fullWidth>
                 <VuiTypography color="secondary" variant="h7">
-                  {timerSeconds2} {' '}
-                  Seconds
+                  {timerSeconds2} Seconds
                 </VuiTypography>
               </VuiButton>
             </Grid>
           </Grid>
-
-
 
           {/* {Old} */}
           {/* <Grid container spacing={3}> */}
@@ -312,19 +293,11 @@ function Dashboard() {
           <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
             <VuiBox display="flex" margin="auto" pt="0" height="100%" pb="10px">
               <VuiTypography fontWeight="extrabold" color="white" align="center">
-                <VuiTypography
-                  fontWeight="bold"
-                  color="info"
-                  variant="h1"
-                >
+                <VuiTypography fontWeight="bold" color="info" variant="h1">
                   BscStart
                 </VuiTypography>
 
-                <VuiTypography
-                  fontWeight="bold"
-                  color="white"
-                  variant="h1"
-                >
+                <VuiTypography fontWeight="bold" color="white" variant="h1">
                   BSC Launchpad Protocol
                 </VuiTypography>
                 <VuiTypography color="white">
@@ -480,10 +453,17 @@ function Dashboard() {
               {/* {Project Active} */}
 
               {/* {BscStart Price Chart} */}
-              <Grid item xs={12} lg={12} xl={12} pt={15} pb={10} >
+              <Grid item xs={12} lg={12} xl={12} pt={15} pb={10}>
                 <Divider light />
-                <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0} width="100%">
-                  <VuiBox display="flex" margin="auto" height="100%" >
+                <VuiBox
+                  component="ul"
+                  display="flex"
+                  flexDirection="column"
+                  p={0}
+                  m={0}
+                  width="100%"
+                >
+                  <VuiBox display="flex" margin="auto" height="100%">
                     <VuiTypography fontWeight="extrabold" color="white" align="center">
                       <VuiTypography variant="h2" color="white" fontWeight="bold">
                         BS Chart
@@ -517,7 +497,13 @@ function Dashboard() {
               {/* {BscStart Price Chart} */}
 
               {/* {BS Economics} */}
-              <Grid container spacing={4} alignItems="center" justifyContent="center" direction="row">
+              <Grid
+                container
+                spacing={4}
+                alignItems="center"
+                justifyContent="center"
+                direction="row"
+              >
                 <Grid item xs={12} md={6} xl={6} alignItems="center" justifyContent="center">
                   <Card>
                     <VuiBox sx={{ height: "100%" }} py={2}>
@@ -538,7 +524,7 @@ function Dashboard() {
                         mb="6px"
                       >
                         <VuiTypography color="text" variant="lg" fontWeight="medium">
-                          Presale: {' '}
+                          Presale:{" "}
                           <VuiTypography color="white" variant="lg" fontWeight="bold">
                             80M
                           </VuiTypography>
@@ -546,14 +532,13 @@ function Dashboard() {
                       </Stack>
                       <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
 
-
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
                         mb="6px"
                       >
                         <VuiTypography color="text" variant="lg" fontWeight="medium">
-                          Launchpad: {' '}
+                          Launchpad:{" "}
                           <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
                             160M
                           </VuiTypography>
@@ -567,12 +552,11 @@ function Dashboard() {
                         mb="6px"
                       >
                         <VuiTypography color="text" variant="lg" fontWeight="medium">
-                          Team: {' '}
+                          Team:{" "}
                           <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
                             80M
                           </VuiTypography>
                         </VuiTypography>
-
                       </Stack>
                       <VuiProgress value={10} color="info" sx={{ background: "#2D2E5F" }} />
 
@@ -582,12 +566,11 @@ function Dashboard() {
                         mb="6px"
                       >
                         <VuiTypography color="text" variant="lg" fontWeight="medium">
-                          BS Ecosystem: {' '}
+                          BS Ecosystem:{" "}
                           <VuiTypography color="white" variant="lg" fontWeight="bold" mb="2px">
                             480M
                           </VuiTypography>
                         </VuiTypography>
-
                       </Stack>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </VuiBox>
@@ -615,10 +598,8 @@ function Dashboard() {
           </Grid>
         </Grid>
         {/* {BS Roadmap} */}
-
       </VuiBox>
-
-    </DashboardLayout >
+    </DashboardLayout>
   );
 }
 
